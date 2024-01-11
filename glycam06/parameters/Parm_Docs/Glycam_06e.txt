@@ -1,0 +1,38 @@
+#### Change log for 2011-09-15 ####
+
+Changed by BLFoley to create Glycam_06e-1.dat
+
+Corrected typo in torsion:
+-NH-CG-CG-SM   1    0.45          0.0            -3.         SCEE=1.0 SCNB=1.0 Thiol-linkages
++N -CG-CG-SM   1    0.45          0.0            -3.         SCEE=1.0 SCNB=1.0 Thiol-linkages
+
+
+#### Change log for 2008-05-20 ####
+
+-- updated torsion parameters for endo/exocyclic terms
+	CG-OS-CG-OS
+	CG-OS-CG-C
+	OS-CP-OS-CG
+	CG-OS-CG-C 
+	CG-CG-C -O2
+	OS-CG-C -O2
+
+OS-CG-OS-CG   1    0.96          0.0            -3.         2,2-Dimethoxypropane
+              1    1.38          0.0            -2.
+              1    1.08          0.0             1.
+OS-CP-OS-CG   1    0.96          0.0            -3.         Copy of OS-CG-OS-CG (not derived)
+              1    1.38          0.0            -2.
+              1    1.08          0.0             1.
+OH-CG-OS-CG   1    0.96          0.0            -3.         Copy of OS-CG-OS-CG (not derived)
+              1    1.38          0.0            -2.
+              1    1.08          0.0             1.
+CG-OS-CG-C    1    0.32          0.0            -3.         1-Methoxy-1-Acetate THP, 1-Methoxy-1-Acetate THP Neutralized w/ Hbond
+              1    0.45          0.0            -2.
+              1   -0.60          0.0             1.
+CG-CG-C -O2   2    0.02          0.0            -3.         Propanoate, 2-Methylpropanoate, 2-Dimethylpropanoate
+              2   -0.82          0.0            -2.
+              2    0.01          0.0             1.
+OS-CG-C -O2   2    0.04          0.0            -3.         2-Methoxy-2-methylpropanoate
+              2   -1.45          0.0            -2.
+              2    0.04          0.0             1.
+

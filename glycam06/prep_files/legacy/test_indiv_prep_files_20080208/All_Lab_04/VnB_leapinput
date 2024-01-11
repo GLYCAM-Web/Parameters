@@ -1,0 +1,15 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../All_Lab_04.prep
+
+x = sequence {OME VnB}
+set x tail x.VnB.O3
+x = sequence {x 0nA}
+set x tail x.VnB.O6
+x = sequence {x 0nA}
+savepdb x VnB.pdb
+saveamberparm x VnB.top VnB.crd
+check x
+charge x
+Quit

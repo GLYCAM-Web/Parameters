@@ -1,0 +1,15 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../Neu5Ac_a_04.prep
+
+x = sequence {OME ISA}
+set x tail x.ISA.O4
+x = sequence {x 0SA}
+set x tail x.ISA.O9
+x = sequence {x 0SA}
+savepdb x ISA.pdb
+saveamberparm x ISA.top ISA.crd
+check x
+charge x
+Quit

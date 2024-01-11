@@ -1,0 +1,15 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../GalNAc_Dab_04.prep
+
+x = sequence {OME UVA}
+set x tail x.UVA.O4
+x = sequence {x 0VA}
+set x tail x.UVA.O6
+x = sequence {x 0VA}
+savepdb x UVA.pdb
+saveamberparm x UVA.top UVA.crd
+check x
+charge x
+Quit

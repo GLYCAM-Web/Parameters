@@ -1,0 +1,142 @@
+20080208 BLFoley
+
+Made slight file-path-type modifications to Austin's script.  My charge-change 
+program doesn't add a final "STOP", so I added them manually and re-ran his
+script.  As a double-check that all worked (since I altered the program a
+little bit), I used the following:
+
+ls */*leapinput > LEAPINPUT.ls
+ls */*top > TOP.ls
+wc LEAPINPUT.ls TOP.ls
+ 1071  1071 27180 LEAPINPUT.ls
+ 1071  1071 20754 TOP.ls
+ 2142  2142 47934 total
+
+...so it looks ok.
+
+20080204 BLFoley
+
+This directory will contain the final, checked prep files.  Subdirectories will
+contain output regarding the checks.  The directory "chargediff" contains details
+of the files for which the charges still differed after Austin's checks for typos
+and other similar inconsistencies.  See more info below (***).
+
+The prep files have been checked to ensure that:
+
+1] D & L forms (mirror images) have identical charges on each atom.  See below
+	for more details on this (***).
+
+2] Equivalent residues are present in the D & L file forms.
+
+3] Residue charges sum to the proper number.
+
+4] Each prep entry will be processed by tleap without errors.  (Note that
+this does not mean the finer points of geometry, etc., have been checked.)
+
+These checks were performed by programs written by Austin Yongye and me.
+There is a little overlap between the two, but mainly:
+
+Lachele's: #'s 1 & 2  (& 3, but not very obviously)
+	to check them:  /home/lachele/software/compare_DL_prep_charges/compare_DL_prep
+	to change charges to averages (or, with small edit, to D or L): 
+		/home/lachele/software/change_DL_prep_charges/change_chg_DL_prep
+
+Austin's: #'s 3 and 4
+	glycam:/home/lachele/Austin_CHECK_PREPS_12172007/zcheck_preps.pl
+
+
+*** Regarding D & L charges:
+
+The following files contained D/L charge differences that were due to
+separate MD simulations, and therefore, were within statistical error
+of each other.  In each case, they were assigned either the D or the L
+charges, whichever was the first to be derived.
+
+Charge columns are
+Name Type D-charge L-charge difference(Dchg-Lchg) percent-diff(100*(Dchg-Lchg)/Dchg)
+
+Fru_f_result.dat (D charges will be used in final)
+	beta form had identical charges
+	missing L-enantiomers for substitution at the 2 position
+	Largest charge differences (20% or greater):
+        C1      CG      0.370000        0.187000        0.183000        49.459459 :
+	C3      CG      0.282000        0.362000        -0.080000       -28.368794 :
+	C4      CG      0.332000        0.261000        0.071000        21.385542 :
+	C5      CG      0.309000        0.145000        0.164000        53.074434 :
+	O5      OS     -0.498000       -0.381000       -0.117000       23.493976 : 
+
+Fuc_p_result.dat (L charges will be used in final)
+	Largest charge differences (10% or greater):
+	Alpha:
+	O2      OH      -0.711000       -0.804000       0.093000        -13.080169 :
+	C4      CG      0.298000        0.263000        0.035000        11.744966 :
+	C5      CG      0.150000        0.187000        -0.037000       -24.666667 :
+	C6      CG      0.076000        0.065000        0.011000        14.473684 : 
+	in residue 2FA / 2fA (also in ZFA & YFA)
+	O2      OS      -0.486000       -0.545000       0.059000        -12.139918 :
+	Beta:
+	C1      CG      0.286000        0.418000        -0.132000       -46.153846 :
+	C5      CG      0.185000        0.106000        0.079000        42.702703 :
+	C6      CG      0.055000        0.092000        -0.037000       -67.272727 :
+	C2      CG      0.471000        0.346000        0.125000        26.539278 :
+
+Gal_p_result.dat (D charges will be used in final)
+	Most charges identical.  Very small differences in some residues:
+	O3      OH      -0.695000       -0.694000       -0.001000       0.143885 :
+	O2      OH      -0.727000       -0.726000       -0.001000       0.137552 :  
+	O6      OS      -0.466000       -0.468000       0.002000        -0.429185 :
+
+Glc_p_result.dat (D charges will be used in final)
+        Most charges identical.  Very small differences in some residues:
+	O6      OS      -0.457000       -0.458000       0.001000        -0.218818 :
+	O4      OS      -0.469000       -0.468000       -0.001000       0.213220 :
+
+ManNAc_p_result.dat (D charges will be used in final)
+        Most charges identical.  Very small differences in one residue (VWB):
+        O3      OS      -0.444000       -0.439000       -0.005000       1.126126 :
+
+Psi_f_result.dat (D charges will be used in final)
+	beta forms are identical.  In the alpha forms, differences over 15% are:
+	C2      CG      0.324000        0.363000        -0.039000       -12.037037 :
+	C1      CG      0.286000        0.187000        0.099000        34.615385 :
+	C5      CG      0.194000        0.145000        0.049000        25.257732 :
+	O5      OS      -0.453000       -0.381000       -0.072000       15.894040 :
+
+Rha_p_result.dat (L charges will be used in final)
+	Largest charge differences (20% or greater):
+	Alpha:
+	C1      CG      0.495000        0.394000        0.101000        20.404040 :
+	C2      CG      0.195000        0.248000        -0.053000       -27.179487 :
+	C3      CG      0.126000        0.236000        -0.110000       -87.301587 :
+	C4      CG      0.364000        0.187000        0.177000        48.626374 :
+	C6      CG      -0.005000       0.023000        -0.028000       560.000000 :
+	beta:
+	C6M     CG      0.067000        0.039000        0.028000        41.791045 :
+	C4      CG      0.302000        0.388000        -0.086000       -28.476821 :
+	C3      CG      0.266000        0.182000        0.084000        31.578947 :
+	C2      CG      0.199000        0.243000        -0.044000       -22.110553 :
+
+Sor_f_result.dat (D charges will be used in final)
+	beta forms are identical.  In the alpha forms, differences over 15% are:
+	C2      CG      0.241000        0.363000        -0.122000       -50.622407 :
+	C1      CG      0.313000        0.187000        0.126000        40.255591 :
+	C3      CG      0.440000        0.362000        0.078000        17.727273 :
+	C4      CG      0.225000        0.261000        -0.036000       -16.000000 :
+	C5      CG      0.271000        0.145000        0.126000        46.494465 :
+	O5      OS      -0.452000       -0.381000       -0.071000       15.707965 :
+
+Sor_p_result.dat (D charges will be used in final)
+	beta forms are identical.  In the alpha forms, differences over 15% are:
+	C2      CG      0.130000        0.345000        -0.215000       -165.384615 :
+	C3      CG      0.372000        0.247000        0.125000        33.602151 :
+	C6      CG      0.341000        0.437000        -0.096000       -28.152493 :
+	O6      OS      -0.507000       -0.620000       0.113000        -22.287968 :
+
+Tag_f_result.dat (D charges will be used in final)
+	beta forms are identical.  In the alpha forms, differences over 15% are:
+        C2      CG      0.192000        0.363000        -0.171000       -89.062500 : 
+        C1      CG      0.389000        0.187000        0.202000        51.928021 :
+        H1O     HO      0.380000        0.443000        -0.063000       -16.578947 :
+        C5      CG      0.190000        0.145000        0.045000        23.684211 :
+        C6      CG      0.340000        0.264000        0.076000        22.352941 : 
+

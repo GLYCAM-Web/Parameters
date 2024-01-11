@@ -1,0 +1,37 @@
+Documentation for the release of library files for GLYCAM-06h-12SB and 
+associated leaprc.  
+
+20120803 BLFoley
+
+This release provides:
+
+	Library files for integration with ff12SB.
+
+Provided files:
+
+	GLYCAM_amino_06h-12SB.lib 
+	GLYCAM_aminoct_06h-12SB.lib 
+	GLYCAM_aminont_06h-12SB.lib 
+	leaprc.GLYCAM_06h-12SB
+
+Related files:
+
+	GLYCAM_06h-1.dat 
+
+See also the documentation for the releases of 
+
+	06h
+	06EPb  
+	06h-1
+
+More information:
+
+	These libraries contain amino acids to which glycans link.  Their 
+	atom type names have been altered to be consistent with those 
+	introduced in the ff12SB force field.  The file leaprc.GLYCAM_06h-12SB
+	is provided to facilitate their use.
+
+	Note:
+
+	It is necessary to use a GLYCAM_06h-1.dat or a later parameter file
+	for integration with ff12SB.

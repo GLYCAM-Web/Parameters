@@ -1,0 +1,41 @@
+Checking D residue 1WA . . . found match: 1wA Charges are identical.  
+Checking D residue 0WA . . . found match: 0wA Charges are identical.  
+Checking D residue 3WA . . . found match: 3wA Charges are identical.  
+Checking D residue 4WA . . . found match: 4wA Charges are identical.  
+Checking D residue 6WA . . . found match: 6wA Charges are identical.  
+Checking D residue WWA . . . found match: WwA Charges are identical.  
+Checking D residue VWA . . . found match: VwA Charges are identical.  
+Checking D residue UWA . . . found match: UwA Charges are identical.  
+Checking D residue QWA . . . found match: QwA Charges are identical.  
+Checking D residue 1WB . . . found match: 1wB Charges are identical.  
+Checking D residue 0WB . . . found match: 0wB Charges are identical.  
+Checking D residue 6WB . . . found match: 6wB Charges are identical.  
+Checking D residue 4WB . . . found match: 4wB Charges are identical.  
+Checking D residue 3WB . . . found match: 3wB Charges are identical.  
+Checking D residue UWB . . . found match: UwB Charges are identical.  
+
+Checking D residue VWB . . . found match: VwB
+The charges differ.  Details follow
+	Raw average difference: -0.000192
+	RMSD: 0.001000
+
+	N	T	CD	CL	CD-CL	100*(CD-CL)/CD 
+	C1	CG	0.387000	0.387000	0.000000	0.000000 : 
+	O5	OS	-0.498000	-0.498000	0.000000	-0.000000 : 
+	C5	CG	0.321000	0.321000	0.000000	0.000000 : 
+	C6	CG	0.247000	0.247000	0.000000	0.000000 : 
+	O6	OS	-0.444000	-0.444000	0.000000	-0.000000 : 
+	C4	CG	0.277000	0.277000	0.000000	0.000000 : 
+	O4	OH	-0.743000	-0.743000	0.000000	-0.000000 : 
+	H4O	HO	0.439000	0.439000	0.000000	0.000000 : 
+	C3	CG	0.217000	0.217000	0.000000	0.000000 : 
+	C2	CG	0.294000	0.294000	0.000000	0.000000 : 
+	N2	N	-0.558000	-0.558000	0.000000	-0.000000 : 
+	H2N	H	0.265000	0.265000	0.000000	0.000000 : 
+	C2N	C	0.585000	0.585000	0.000000	0.000000 : 
+	O2N	O	-0.600000	-0.600000	0.000000	-0.000000 : 
+	CME	CG	0.056000	0.056000	0.000000	0.000000 : 
+	O3	OS	-0.444000	-0.439000	-0.005000	1.126126 : 
+
+Checking D residue WWB . . . found match: WwB Charges are identical.  
+Checking D residue QWB . . . found match: QwB Charges are identical.  

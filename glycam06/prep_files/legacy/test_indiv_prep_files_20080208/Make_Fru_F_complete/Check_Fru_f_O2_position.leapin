@@ -1,0 +1,8 @@
+logfile Check_Fru_f_O2_position.leaplog
+source leaprc_Fruf_check
+#fruf_2CD2CD_O2 = sequence { 2CD 0CD }  ## works
+#savepdb fruf_2CD2CD_O2 fruf_2CD2CD_O2.pdb
+#fruf_2cD2cD_O2 = sequence { 2cD 0cD }  ## works
+#savepdb fruf_2cD2cD_O2 fruf_2cD2cD_O2.pdb
+fruf_2cU2cU_O2 = sequence { 2cU 0cU }  ## works
+savepdb fruf_2cU2cU_O2 fruf_2cU2cU_O2.pdb

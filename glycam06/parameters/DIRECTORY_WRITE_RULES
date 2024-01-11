@@ -1,0 +1,34 @@
+Write rules for directory:
+
+/usr/local/programs/glycam06/parameters
+
+
+Rule 1 (20080221) 
+
+Make sure that only glycam parameter files are named as:
+
+Glycam_*.dat
+
+-- Note that the documentation file is named "Glycam06_alldocs.txt" which
+	lacks an underscore after "Glycam".
+
+This is needed for the AMBER parameter to CHARMM parameter converter, parm2prm.
+The source for the converter is parm2prm.c.  The converter is part of a larger 
+package, AMB2CHM.  The package is called when a user requests output from the 
+web tool be in CHARMM format.  The AMB2CHM package, including the parm2prm.c
+source, can be found in this directory tree:
+
+/usr/local/programs/tomcat/webapps/AMB2CHM
+
+The source uses the file names and their creation date to determine the version
+of the glycam parameters (e.g., "Glycam_06b.dat", "Glycam_06c.dat", etc.) that
+is identical to "Glycam_06_current.dat".  The program will write an error 
+message in the user files if there is any file of type "Glycam_*.dat" that is
+more recent than "Glycam_06_current.dat".
+
+I will happily receive suggestions for more elegant methods (lfoley@uga.edu).
+
+Rule 2 (20080221)
+
+Place only documentation text files in Parm_Docs.  cat_parm_docs.sh uses
+the files in that directory.

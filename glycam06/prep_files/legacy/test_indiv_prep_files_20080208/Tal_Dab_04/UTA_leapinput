@@ -1,0 +1,15 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../Tal_Dab_04.prep
+
+x = sequence {OME UTA}
+set x tail x.UTA.O4
+x = sequence {x 0TA}
+set x tail x.UTA.O6
+x = sequence {x 0TA}
+savepdb x UTA.pdb
+saveamberparm x UTA.top UTA.crd
+check x
+charge x
+Quit

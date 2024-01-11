@@ -1,0 +1,46 @@
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/prep to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/lib to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/parm to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/cmd to search path.
+-f: Source 4YA_leapinput.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./4YA_leapinput
+----- Source: ../leaprc
+----- Source of ../leaprc done
+Loading parameters: /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+Reading title:
+GLYCAM PARAMETERS (FOR AMBER 8.0, RESP 0.010), COPYRIGHT CCRC 2004
+Loading Prep file: ../aglycon_04.prep.file
+Loading Prep file: ../GlcNAc_Dab_04.prep
+Writing pdb file: 4YA.pdb
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+old PREP-specified impropers:
+ <4YA 2>:  C2   C2N  N2   H2N 
+ <4YA 2>:  CME  N2   C2N  O2N 
+ <0YA 3>:  C2   C2N  N2   H2N 
+ <0YA 3>:  CME  N2   C2N  O2N 
+ total 4 improper torsions applied
+ 4 improper torsions in old prep form
+Building H-Bond parameters.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+Checking 'x'....
+Warning: Close contact of 0.379588 angstroms between .R<4YA 2>.A<H62 24> and .R<0YA 3>.A<O5 23>
+Warning: Close contact of 1.571720 angstroms between .R<4YA 2>.A<H61 23> and .R<0YA 3>.A<H61 25>
+Checking parameters for unit 'x'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 2
+Unit is OK.
+Total unperturbed charge:   0.000000
+Total perturbed charge:     0.000000
+	Quit

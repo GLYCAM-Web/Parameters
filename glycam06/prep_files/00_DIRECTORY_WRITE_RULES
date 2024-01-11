@@ -1,0 +1,4 @@
+Rule 1 (20080221 BLF) 
+
+In the indiv_prep_files/ directory, only prep files should be named "*.prep".
+The cat_preps.sh script uses these files.

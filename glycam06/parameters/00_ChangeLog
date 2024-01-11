@@ -1,0 +1,101 @@
+#### Change log for 2014-02-14 by BLFoley ####
+
+Added parameters version j.
+
+#### Change log for 20111024 by JAHadden ####
+
+-- added directory legacy/
+
+-- moved Glycam_04EP.dat to legacy/
+	Find an updated version of this in
+	/ln/params/glycam06ep
+
+#### Change log for 20110915 by BLFoley ####
+
+-- moved the official directory to /ln/params/glycam06/parameters
+
+-- removed stray sander output files from directory (e.g. mden, mdinfo)
+
+
+#### Change log for 20110706 by BLFoley ####
+#### Note that changes prior to this were not 
+####	entered in the typical reverse order.
+#### Changing that now
+
+-- altered the file:
+	Parm_Docs/Glycam_06g.txt
+   so that it contains an estimated release date.
+
+#### Change log begun on 20080221 by BLFoley ####
+
+-- copied these files from the glycam04 tree:
+	cat_parm_docs.sh
+	DIRECTORY_WRITE_RULES
+	Glycam_04EP.dat
+	Glycam_06a.dat
+	Glycam_06b.dat
+	Glycam_06c.dat
+	Glycam_06_current.dat
+	Glycam_06.dat
+	Glycam_06.dat_bak_july23_2007
+	Glycam_06.dat_FirstSubmission_JCC
+	Glycam_06a.txt
+	Glycam_06b.txt
+	Glycam_06c.txt
+	Glycam_06.txt
+
+-- updated these files for the new directories
+	cat_parm_docs.sh
+	DIRECTORY_WRITE_RULES
+
+-- to reduce clutter, made a Legacy_Backups directory and moved
+	these files to it:
+		Glycam_06.dat_bak_july23_2007
+		Glycam_06.dat_FirstSubmission_JCC
+
+-- changed the name of the documentation directory to Parm_Docs
+	and moved these files to it:
+		Glycam_06a.txt
+		Glycam_06b.txt
+		Glycam_06c.txt
+		Glycam_06.txt
+
+-- generated the new all-docs file
+	Glycam06_alldocs.txt
+
+-- made sure that ls -lart puts the .dat files in the right order
+	Glycam_06a.dat
+	Glycam_06b.dat
+	Glycam_06c.dat
+	Glycam_06_current.dat
+
+
+#### Change log for 20080512 by MBTessier ####
+
+-- updated torsion parameters for SM terms
+	CG-CG-SM-CG
+	SM-CG-CG-HC
+	SM-CG-CG-H1
+	CG-CG-CG-SM
+
+-- updated the contributors list, added:
+	Austin Yongye
+	Matthew Tessier
+	Sameer Kawatkar
+
+
+#### Change log for 20080723 by MBTessier
+
+-- updated endo/exocylic ring terms
+	OS-CG-OS-CG
+	OH-CG-OS-CG
+	OS-CP-OS-CP
+	CG-OS-CG-C
+	OS-CG-C -O2
+	CG-CG-C -O2
+
+#### Change log for 20090203 by MBTessier
+
+-- Corrected sign typo for O-Acetyl group
+	CG-C -OS-CG
+

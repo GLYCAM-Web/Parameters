@@ -1,0 +1,43 @@
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/prep to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/lib to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/parm to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/cmd to search path.
+-f: Source WdA_leapinput.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./WdA_leapinput
+----- Source: ../leaprc
+----- Source of ../leaprc done
+Loading parameters: /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+Reading title:
+GLYCAM PARAMETERS (FOR AMBER 8.0, RESP 0.010), COPYRIGHT CCRC 2004
+Loading Prep file: ../aglycon_04.prep.file
+Loading Prep file: ../Lyx_Lab_04.prep
+Writing pdb file: WdA.pdb
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 0 improper torsions applied
+Building H-Bond parameters.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+Checking 'x'....
+Warning: Close contact of 0.521438 angstroms between .R<0dA 3>.A<O2 17> and .R<0dA 4>.A<H5E 6>
+Warning: Close contact of 1.922580 angstroms between .R<0dA 3>.A<O2 17> and .R<0dA 4>.A<C5 4>
+Warning: Close contact of 1.561645 angstroms between .R<0dA 3>.A<H2O 18> and .R<0dA 4>.A<H5E 6>
+Warning: Close contact of 0.392778 angstroms between .R<0dA 3>.A<H2O 18> and .R<0dA 4>.A<H5A 5>
+Warning: Close contact of 0.906394 angstroms between .R<0dA 3>.A<H2O 18> and .R<0dA 4>.A<C5 4>
+Checking parameters for unit 'x'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 5
+Unit is OK.
+Total unperturbed charge:  -0.000000
+Total perturbed charge:    -0.000000
+	Quit

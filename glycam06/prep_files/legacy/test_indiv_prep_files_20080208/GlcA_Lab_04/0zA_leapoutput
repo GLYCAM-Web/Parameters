@@ -1,0 +1,46 @@
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/prep to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/lib to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/parm to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/cmd to search path.
+-f: Source 0zA_leapinput.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./0zA_leapinput
+----- Source: ../leaprc
+----- Source of ../leaprc done
+Loading parameters: /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+Reading title:
+GLYCAM PARAMETERS (FOR AMBER 8.0, RESP 0.010), COPYRIGHT CCRC 2004
+Loading Prep file: ../aglycon_04.prep.file
+Loading Prep file: ../GlcA_Lab_04.prep
+Writing pdb file: 0zA.pdb
+Checking Unit.
+WARNING: The unperturbed charge of the unit: -1.000000 is not zero.
+
+ -- ignoring the warning.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+old PREP-specified impropers:
+ <0zA 2>:  C5   O6A  C6   O6B 
+ total 1 improper torsion applied
+ 1 improper torsions in old prep form
+Building H-Bond parameters.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+Checking 'x'....
+WARNING: The unperturbed charge of the unit: -1.000000 is not zero.
+Checking parameters for unit 'x'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 1
+Unit is OK.
+Total unperturbed charge:  -1.000000
+Total perturbed charge:    -1.000000
+	Quit

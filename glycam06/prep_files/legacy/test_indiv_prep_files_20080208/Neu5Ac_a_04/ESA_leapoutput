@@ -1,0 +1,111 @@
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/prep to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/lib to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/parm to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/cmd to search path.
+-f: Source ESA_leapinput.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./ESA_leapinput
+----- Source: ../leaprc
+----- Source of ../leaprc done
+Loading parameters: /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+Reading title:
+GLYCAM PARAMETERS (FOR AMBER 8.0, RESP 0.010), COPYRIGHT CCRC 2004
+Loading Prep file: ../aglycon_04.prep.file
+Loading Prep file: ../Neu5Ac_a_04.prep
+Writing pdb file: ESA.pdb
+Checking Unit.
+WARNING: The unperturbed charge of the unit: -4.000000 is not zero.
+
+ -- ignoring the warning.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+old PREP-specified impropers:
+ <0SA 4>:  C2   O1A  C1   O1B 
+ <0SA 4>:  C5   C5N  N5   H5N 
+ <0SA 4>:  CME  N5   C5N  O5N 
+ <ESA 2>:  C2   O1A  C1   O1B 
+ <ESA 2>:  C5   C5N  N5   H5N 
+ <ESA 2>:  CME  N5   C5N  O5N 
+ <0SA 3>:  C2   O1A  C1   O1B 
+ <0SA 3>:  C5   C5N  N5   H5N 
+ <0SA 3>:  CME  N5   C5N  O5N 
+ <0SA 5>:  C2   O1A  C1   O1B 
+ <0SA 5>:  C5   C5N  N5   H5N 
+ <0SA 5>:  CME  N5   C5N  O5N 
+ total 12 improper torsions applied
+ 12 improper torsions in old prep form
+Building H-Bond parameters.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+Checking 'x'....
+WARNING: The unperturbed charge of the unit: -4.000000 is not zero.
+Warning: Close contact of 1.073753 angstroms between .R<0SA 4>.A<C1 2> and .R<0SA 3>.A<H9O 37>
+Warning: Close contact of 0.544130 angstroms between .R<0SA 4>.A<C1 2> and .R<0SA 3>.A<O9 36>
+Warning: Close contact of 0.440506 angstroms between .R<0SA 4>.A<O1A 3> and .R<0SA 3>.A<H9O 37>
+Warning: Close contact of 1.781638 angstroms between .R<0SA 4>.A<O1A 3> and .R<0SA 3>.A<O9 36>
+Warning: Close contact of 0.685548 angstroms between .R<0SA 4>.A<O1B 4> and .R<0SA 3>.A<O9 36>
+Warning: Close contact of 1.419959 angstroms between .R<0SA 4>.A<O1B 4> and .R<0SA 3>.A<H9S 35>
+Warning: Close contact of 0.686227 angstroms between .R<0SA 4>.A<O1B 4> and .R<0SA 3>.A<C9 33>
+Warning: Close contact of 1.698872 angstroms between .R<0SA 4>.A<O5N 17> and .R<0SA 4>.A<H7O 28>
+Warning: Close contact of 0.472425 angstroms between .R<0SA 4>.A<O6 23> and .R<ESA 2>.A<H9S 31>
+Warning: Close contact of 1.157667 angstroms between .R<0SA 4>.A<H7 26> and .R<0SA 5>.A<H9O 37>
+Warning: Close contact of 1.543774 angstroms between .R<0SA 4>.A<C8 29> and .R<ESA 2>.A<O9 32>
+Warning: Close contact of 2.205106 angstroms between .R<0SA 4>.A<C8 29> and .R<0SA 5>.A<H8O 32>
+Warning: Close contact of 0.615633 angstroms between .R<0SA 4>.A<C8 29> and .R<0SA 5>.A<H8 30>
+Warning: Close contact of 1.934593 angstroms between .R<0SA 4>.A<C8 29> and .R<0SA 5>.A<C8 29>
+Warning: Close contact of 0.117618 angstroms between .R<0SA 4>.A<H8 30> and .R<ESA 2>.A<O9 32>
+Warning: Close contact of 1.281442 angstroms between .R<0SA 4>.A<H8 30> and .R<ESA 2>.A<H9O 33>
+Warning: Close contact of 2.074581 angstroms between .R<0SA 4>.A<H8 30> and .R<0SA 5>.A<H8O 32>
+Warning: Close contact of 0.802876 angstroms between .R<0SA 4>.A<O8 31> and .R<0SA 5>.A<H8 30>
+Warning: Close contact of 1.592312 angstroms between .R<0SA 4>.A<H8O 32> and .R<ESA 2>.A<H9R 30>
+Warning: Close contact of 1.006861 angstroms between .R<0SA 4>.A<C9 33> and .R<0SA 5>.A<O8 31>
+Warning: Close contact of 2.192611 angstroms between .R<0SA 4>.A<C9 33> and .R<0SA 5>.A<H8 30>
+Warning: Close contact of 0.303679 angstroms between .R<0SA 4>.A<C9 33> and .R<0SA 5>.A<C8 29>
+Warning: Close contact of 1.716985 angstroms between .R<0SA 4>.A<H9R 34> and .R<0SA 5>.A<H9R 34>
+Warning: Close contact of 0.438098 angstroms between .R<0SA 4>.A<H9R 34> and .R<0SA 5>.A<C9 33>
+Warning: Close contact of 0.802213 angstroms between .R<0SA 4>.A<H9R 34> and .R<0SA 5>.A<C8 29>
+Warning: Close contact of 2.028987 angstroms between .R<0SA 4>.A<H9S 35> and .R<0SA 5>.A<H8O 32>
+Warning: Close contact of 0.363855 angstroms between .R<0SA 4>.A<H9S 35> and .R<0SA 5>.A<O8 31>
+Warning: Close contact of 1.472627 angstroms between .R<0SA 4>.A<O9 36> and .R<0SA 5>.A<H7 26>
+Warning: Close contact of 0.466469 angstroms between .R<0SA 4>.A<O9 36> and .R<0SA 5>.A<C7 25>
+Warning: Close contact of 2.052283 angstroms between .R<0SA 4>.A<O9 36> and .R<0SA 5>.A<H6 24>
+Warning: Close contact of 1.547989 angstroms between .R<0SA 4>.A<O9 36> and .R<0SA 5>.A<C6 22>
+Warning: Close contact of 2.101261 angstroms between .R<0SA 4>.A<H9O 37> and .R<0SA 5>.A<O7 27>
+Warning: Close contact of 0.521402 angstroms between .R<0SA 4>.A<H9O 37> and .R<0SA 5>.A<C7 25>
+Warning: Close contact of 1.017114 angstroms between .R<0SA 4>.A<H9O 37> and .R<0SA 5>.A<C6 22>
+Warning: Close contact of 2.064074 angstroms between .R<ESA 2>.A<N5 12> and .R<0SA 3>.A<O6 23>
+Warning: Close contact of 1.010486 angstroms between .R<ESA 2>.A<H5N 13> and .R<0SA 3>.A<O1A 3>
+Warning: Close contact of 2.237318 angstroms between .R<ESA 2>.A<C5N 14> and .R<0SA 3>.A<H8O 32>
+Warning: Close contact of 1.309452 angstroms between .R<ESA 2>.A<C5N 14> and .R<0SA 3>.A<H8 30>
+Warning: Close contact of 2.138080 angstroms between .R<ESA 2>.A<C5N 14> and .R<0SA 3>.A<C8 29>
+Warning: Close contact of 2.188689 angstroms between .R<ESA 2>.A<C5N 14> and .R<0SA 3>.A<O6 23>
+Warning: Close contact of 0.262103 angstroms between .R<ESA 2>.A<O5N 15> and .R<0SA 3>.A<H8 30>
+Warning: Close contact of 1.973959 angstroms between .R<ESA 2>.A<O5N 15> and .R<0SA 3>.A<C8 29>
+Warning: Close contact of 1.824063 angstroms between .R<ESA 2>.A<CME 16> and .R<0SA 3>.A<C7 25>
+Warning: Close contact of 1.526792 angstroms between .R<ESA 2>.A<CME 16> and .R<0SA 3>.A<H6 24>
+Warning: Close contact of 2.192041 angstroms between .R<ESA 2>.A<CME 16> and .R<0SA 3>.A<C6 22>
+Warning: Close contact of 0.847600 angstroms between .R<ESA 2>.A<H1M 17> and .R<0SA 3>.A<O8 31>
+Warning: Close contact of 2.065142 angstroms between .R<ESA 2>.A<H1M 17> and .R<0SA 3>.A<C8 29>
+Warning: Close contact of 0.608288 angstroms between .R<ESA 2>.A<H2M 18> and .R<0SA 3>.A<H7 26>
+Warning: Close contact of 0.590859 angstroms between .R<ESA 2>.A<H2M 18> and .R<0SA 3>.A<C7 25>
+Warning: Close contact of 0.115967 angstroms between .R<ESA 2>.A<H3M 19> and .R<0SA 3>.A<H6 24>
+Warning: Close contact of 1.864645 angstroms between .R<ESA 2>.A<H3M 19> and .R<0SA 3>.A<C6 22>
+Warning: Close contact of 0.629061 angstroms between .R<ESA 2>.A<H9O 33> and .R<0SA 5>.A<O6 23>
+Warning: Close contact of 1.698872 angstroms between .R<0SA 3>.A<H7O 28> and .R<0SA 3>.A<O5N 17>
+Warning: Close contact of 1.698872 angstroms between .R<0SA 5>.A<H7O 28> and .R<0SA 5>.A<O5N 17>
+Checking parameters for unit 'x'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 55
+Unit is OK.
+Total unperturbed charge:  -4.000000
+Total perturbed charge:    -4.000000
+	Quit

@@ -1,0 +1,9 @@
+File Fru_f_newprep/Fru_f.log written by compare_DL_prep on 12:50:44, Wednesday, 5 February, 2008.
+The command used to generate this fileset was:
+	/home/lachele/software/change_DL_prep_charges/change_chg_DL_prep Fru_Ddu_04.prep Fru_Ldu_04.prep Fru_f D 
+Other warnings or notices, if any, follow.
+
+Warning!!! the number of D sugars does not match the number of L
+sugars for the run with prefix Fru_f.
+There are 12 residues in the D sugar file (Fru_Ddu_04.prep).
+There are 10 residues in the L sugar file (Fru_Ldu_04.prep).

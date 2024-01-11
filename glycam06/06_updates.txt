@@ -1,0 +1,72 @@
+File:  06_updates.txt
+Purpose:  Provide summary documentation for updates to the GLYCAM_06 force field
+		for all versions after GLYCAM_06h.
+
+
+File type	File name			Update summary
+
+Documentation	06_updates.txt			This file
+		06j-1_docs.txt			Documentatin for any file named 
+							with version 06j.
+		06j_docs.txt			Documentation for any file named
+							with version 06j
+		06i_docs.txt			Documentation for any file named
+							with version 06i
+		06h-12SB_lib_docs.txt		Documentation describing changes 
+							needed to employ ff12SB 
+		06h-1_parm_docs.txt		Documentation describing changes 
+							needed to make 
+							GLYCAM_06h-1.dat and 
+							GLYCAM_06h-1.prep
+		06h-EPb_docs.txt		General documentation for 
+							GLYCAM_06h and 
+							GLYCAM_06EPb
+
+Leaprc 		leaprc.GLYCAM_06j-1		leaprc to use for carbohydrates 
+							alone or with ff12SB
+ 		leaprc.GLYCAM_06j		leaprc to use for carbohydrates 
+							alone or with ff10
+		leaprc.GLYCAM_06j_12SB		leaprc to use for carbohydrates 
+							alone or with ff12SB
+		leaprc.GLYCAM_06i		Updated leaprc to use with
+							GLYCAM_06i.prep
+		leaprc.GLYCAM_06i-12SB		Updated leaprc to use with
+							GLYCAM_06i.prep
+		leaprc.GLYCAM_06h-12SB-1	Update leaprc.GLYCAM_06h-12SB to 
+							load GLYCAM_06h-1.prep
+		leaprc.GLYCAM_06h-2		Update leaprc.GLYCAM_06h-1 to 
+							load GLYCAM_06h-1.prep
+		leaprc.GLYCAM_06h-12SB		Provide leaprc including 
+							GLYCAM_06h-1.dat and 
+							the 12SB lib files
+		leaprc.GLYCAM_06h-1		Provide leaprc including 
+							GLYCAM_06h-1.dat
+
+Lib		GLYCAM_amino_06j_10.lib		Library files consistent with 
+							the ff10 force field.
+		GLYCAM_aminoct_06j_10.lib	"
+		GLYCAM_aminont_06j_10.lib	"
+
+		GLYCAM_amino_06j_12SB.lib	Library files consistent with 
+						the ff112SB force field.
+		GLYCAM_aminoct_06j_12SB.lib	"
+		GLYCAM_aminont_06j_12SB.lib	"
+
+		GLYCAM_amino_06h-12SB.lib	Provide library files consistent 
+							with the ff12SB 
+							force field.
+		GLYCAM_aminoct_06h-12SB.lib	"
+		GLYCAM_aminont_06h-12SB.lib	"
+
+Parameter	GLYCAM_06j.dat			Updated params for ff10, ff13, 
+							ff12SB and ff13SB
+		GLYCAM_06h-1.dat		Add missed parameters for 
+							N-linking to ASN
+
+Prep		GLYCAM_06j-1.prep		Updated for use with ff12SB and ff13SB.
+		GLYCAM_06j.prep			Updated for use with ff10 and ff13.
+		GLYCAM_06i.prep			Add entries for abequose and 
+							alpha-L-2-deoxy-rhamnose
+		GLYCAM_06h-1.prep		Correct error in residue MEX 
+							(charge assigned 
+							 to wrong atom)

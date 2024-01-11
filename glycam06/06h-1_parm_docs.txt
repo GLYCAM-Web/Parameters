@@ -1,0 +1,53 @@
+Documentation for the release of GLYCAM_06h-1.dat, GLYCAM_06h-1.prep and associated leaprc
+
+20130816 BLFoley
+
+Also added leaprc files to call that prep file.
+
+20130729 BLFoley
+
+This update corrects a typographical error in the MEX residue.  The charge was incorrectly
+assigned to H1 when it should have been CH3.
+
+20120803 BLFoley
+
+This release provides:
+
+	A few parameters that were omitted in 06h.
+
+	Parameters necessary for integration with ff12SB.
+
+Provided files:
+
+	GLYCAM_06h-1.dat 
+	leaprc.GLYCAM_06h-1
+
+Related files:
+
+	leaprc.GLYCAM_06h-12SB
+	GLYCAM_amino_06h-12SB.lib 
+	GLYCAM_aminoct_06h-12SB.lib 
+	GLYCAM_aminont_06h-12SB.lib 
+
+See also the documentation for the releases of 
+
+	06h
+	06EPb  
+	06h-12SB_lib_docs
+
+More information:
+
+	After the change in glycan atom type names, protein-linkage 
+	parameters had to be recast for the new atom type names.  A few 
+	entries relevant to linkages between glycans and proteins, where a 
+	mix of type names was required, were missed.  These have been added. 
+
+	Parameters were also added to reflect atom type names and values
+	appropriate to the ff12SB force field.  These entries should not 
+	conflict with entries for other force fields as long as the atom 
+	type names remain orthogonal.
+
+	Note:
+
+	To use the ff12SB parameters, use the library files versioned
+	06h-ff12SB.  The file leaprc.GLYCAM_06h-12SB facilitates this.

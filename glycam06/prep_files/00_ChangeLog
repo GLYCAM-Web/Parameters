@@ -1,0 +1,53 @@
+===============================================================================
+2014-02-14 BLFoley 
+
+Added parameters version j.
+
+===============================================================================
+2013-08-29 BLFoley
+
+Uploaded the 06i prep file which contains entries for abequose and 
+	2-deoxy-rhamnose.  
+
+===============================================================================
+2013-08-16 BLFoley
+
+Fixed an error in the 06h prep file.  In the MEX residue, the charge had been
+	placed on a hydrogen.  I moved it to the carbon.
+
+===============================================================================
+
+Change log opened on 20110930 by BLFoley
+
+Directory: /ln/params/glycam06/prep_files
+
+Purpose:  This directory contains official Glycam prep files and libraries.
+
+Directory contents:
+
+	00_ChangeLog			This file
+
+	cat_preps.sh			Script to concatenate the prep files
+					in indiv_prep_files into the main
+					database (e.g., Glycam_06.prep)
+	
+	DIRECTORY_WRITE_RULES		Rules to follow so that, for example,
+					certain scripts do not break
+
+	Glycam_06_lipids.prep		Prep file for building lipids
+
+	Glycam_06.prep			Prep file for building oligosaccharides
+
+	indiv_amino_glycam_prep		Directory containing the glycam 
+					amino acid libraries.
+
+	indiv_lipid_glycam_prep		Currently empty
+
+	indiv_prep_files 		Directory containing the individual prep
+					files from which the main oligosaccharide
+					database is constructed
+
+	legacy				Directory containing historical info
+
+	previous_versions		Directory containing previous versions
+					of files (e.g. Glycam_06.prep)

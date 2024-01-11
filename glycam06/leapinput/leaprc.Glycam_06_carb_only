@@ -1,0 +1,53 @@
+# ----- leaprc for loading the Glycam_06 carbohydrate force field
+# also contains atom types for lipids
+#
+#       load atom type hybridizations
+#
+addAtomTypes {
+        { "C"   "C" "sp2" }
+        { "CG"  "C" "sp3" }
+        { "CY"  "C" "sp3" }
+        { "CK"  "C" "sp2" }
+        { "CT"  "C" "sp3" }
+        { "CJ"  "C" "sp2" }
+        { "CP"  "C" "sp3" } 
+        { "H"   "H" "sp3" }
+        { "H1"  "H" "sp3" }
+        { "H2"  "H" "sp3" }
+        { "HA"  "H" "sp3" }
+        { "HP"  "H" "sp3" } 
+        { "HC"  "H" "sp3" }
+        { "HO"  "H" "sp3" }
+        { "HW"  "H" "sp3" }
+	{ "N"   "N" "sp2" }
+        { "NT"  "N" "sp3" }
+        { "N3"  "N" "sp3" } 
+        { "OH"  "O" "sp3" }
+        { "OS"  "O" "sp3" }
+        { "O"   "O" "sp2" }
+        { "O2"  "O" "sp2" }
+        { "OW"  "O" "sp3" }
+        { "OY"  "O" "sp3" }
+        { "S"   "S" "sp3" }
+        { "SM"  "S" "sp3" }
+        { "P"   "P" "sp3" } 
+}
+#
+#       load the main paramter set
+#
+glycam_06 = loadamberparams /usr/local/programs/glycam06/parameters/Glycam_06_current.dat
+#
+#       load all prep files for polysaccharides
+#
+loadamberprep /usr/local/programs/glycam06/prep_files/Glycam_06.prep
+#
+#	load lib files
+#
+# for explicit solvent
+loadOff solvents.lib 
+HOH = TP3
+WAT = TP3
+#       assumes most users want to use tip3p as the explicit solvent model
+#       but this can easily switched by the following commands in leap:
+#       WAT = TP5
+#       loadamberparams frcmod.tip5p

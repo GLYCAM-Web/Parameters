@@ -1,0 +1,23 @@
+#source leaprc.ff12SB
+source leaprc.ff14SB
+source leaprc.GLYCAM_06j-1
+loadamberparams frcmod_interim_OLK-OLY
+loadOff amino12_OLK-OLY_interim.lib
+
+m1 = sequence { ALA OLK ALA }
+set m1 tail m1.2.O2
+m1 = sequence { m1 0GB }
+impose m1 { 4 } { { "C1" "O2" "CD" "CE" -120.0 } }
+check m1
+savepdb m1 new-OLK.pdb
+saveamberparm m1 new-OLK.parm7 new-OLK.rst7
+
+m2 = sequence { ALA OLY ALA }
+set m2 tail m2.2.O2
+m2 = sequence { m2 0GB }
+impose m2 { 4 } { { "C1" "O2" "CZ" "CE2" 90.0 } }
+check m2
+savepdb m2 new-OLY.pdb
+saveamberparm m2 new-OLY.parm7 new-OLY.rst7
+
+quit

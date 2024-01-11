@@ -1,0 +1,15 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../All_Dab_04.prep
+
+x = sequence {OME UNA}
+set x tail x.UNA.O4
+x = sequence {x 0NA}
+set x tail x.UNA.O6
+x = sequence {x 0NA}
+savepdb x UNA.pdb
+saveamberparm x UNA.top UNA.crd
+check x
+charge x
+Quit

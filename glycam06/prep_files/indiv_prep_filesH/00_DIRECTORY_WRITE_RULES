@@ -1,0 +1,18 @@
+Rule 1 (20110830 BLF) 
+
+	Only prep files should be named "*.prep".
+
+	Reason: 
+		The ../cat_preps.sh script uses these files.
+
+Rule 2 (20110830 BLF)
+
+	Place earlier versions of prep files in the "previous_versions"
+		subdirectory.  That is, if you make a file called
+		Residue-2.prep, then the files Residue.prep and 
+		Residue-1.prep should be in that directory.
+
+	Reason:
+		The ../cat_preps.sh script requires only current and 
+		usable prep files be in this directory and that they
+		all be named "*.prep".

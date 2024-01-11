@@ -1,0 +1,15 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../Alt_Dab_04.prep
+
+x = sequence {OME VEA}
+set x tail x.VEA.O3
+x = sequence {x 0EA}
+set x tail x.VEA.O6
+x = sequence {x 0EA}
+savepdb x VEA.pdb
+saveamberparm x VEA.top VEA.crd
+check x
+charge x
+Quit

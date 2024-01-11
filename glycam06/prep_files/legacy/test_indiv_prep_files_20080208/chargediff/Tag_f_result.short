@@ -1,0 +1,32 @@
+Checking D residue 0JD . . . found match: 0jD
+The charges differ.  Details follow
+	RMSD: 0.068708
+	N	T	CD	CL	CD-CL	100*(CD-CL)/CD 
+	C2	CG	0.192000	0.363000	-0.171000	-89.062500 : 
+	C1	CG	0.389000	0.187000	0.202000	51.928021 : 
+	O1	OH	-0.654000	-0.659000	0.005000	-0.764526 : 
+	H1O	HO	0.380000	0.443000	-0.063000	-16.578947 : 
+	C3	CG	0.393000	0.362000	0.031000	7.888041 : 
+	O3	OH	-0.748000	-0.710000	-0.038000	5.080214 : 
+	H3O	HO	0.446000	0.428000	0.018000	4.035874 : 
+	C4	CG	0.233000	0.261000	-0.028000	-12.017167 : 
+	O4	OH	-0.671000	-0.701000	0.030000	-4.470939 : 
+	H4O	HO	0.414000	0.428000	-0.014000	-3.381643 : 
+	C5	CG	0.190000	0.145000	0.045000	23.684211 : 
+	O5	OS	-0.410000	-0.381000	-0.029000	7.073171 : 
+	C6	CG	0.340000	0.264000	0.076000	22.352941 : 
+	O6	OH	-0.725000	-0.623000	-0.102000	14.068966 : 
+	H6O	HO	0.425000	0.387000	0.038000	8.941176 : 
+
+Checking D residue 1JD . . . found match: 1jD
+The charges differ.  Details follow
+	RMSD: 0.070181
+	O1	OS	-0.468000	-0.410000	-0.058000	12.393162 : 
+
+(etc.)
+
+Checking D residue 0JU . . . found match: 0jU Charges are identical.
+Checking D residue 1JU . . . found match: 1jU Charges are identical.
+Checking D residue 6JU . . . found match: 6jU Charges are identical.
+Checking D residue 4JU . . . found match: 4jU Charges are identical.
+Checking D residue 3JU . . . found match: 3jU Charges are identical.  

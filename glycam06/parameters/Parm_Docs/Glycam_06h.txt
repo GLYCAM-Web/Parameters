@@ -1,0 +1,42 @@
+#### Change log for 2012-02-08 ####
+All atom types were changed to match the new AMBER standard where
+GLYCAM-specific atom types are denoted by a new format.  In the new format,
+atom-types with two characters are denoted "Ab" where "A" is capitalized and
+"b" is lowercase.  Cross-over terms, when force fields are mixed, maintain the
+formatting appropriate to the atom types for each force field being mixed.
+Atom types specific to various force fields have been included in the AMBER
+Tools manual for reference.
+## Atom type changes [old = new] ##
+CG = Cg
+CJ = Cj
+CK = Ck
+CP = Cp
+CY = Cy
+HA = Ha
+HC = Hc
+HO = Ho
+HP = Hp
+OH = Oh
+OS = Os
+SM = Sm
+N  = Ng
+
+# Updated N-Sulfate terms to correct H-N-C-H torsion definitions for
+# sugar-models.  Originally developed with THP models.
+###
+## Changed the following terms from:
+S -Ng-Cg-H1   1    0.02          0.0             3.         SCEE=1.0 SCNB=1.0
+N-Sulfates
+S -Ng-Cg-Cg   1    0.0           0.0            -3.         SCEE=1.0 SCNB=1.0
+N-Sulfates
+              1   -1.25          0.0            -2.         SCEE=1.0 SCNB=1.0
+              1   -4.00          0.0             1.         SCEE=1.0 SCNB=1.0
+
+## to:
+S -Ng-Cg-H1   1    2.00          0.0             1.         SCEE=1.0 SCNB=1.0
+N-Sulfates
+S -Ng-Cg-Cg   1    0.0           0.0            -3.         SCEE=1.0 SCNB=1.0
+N-Sulfates
+              1    0.50          0.0            -2.         SCEE=1.0 SCNB=1.0
+              1    0.50          0.0             1.         SCEE=1.0 SCNB=1.0
+

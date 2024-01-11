@@ -1,0 +1,17 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../Qui_Lab_04.prep
+
+x = sequence {OME TqA}
+set x tail x.TqA.O2
+x = sequence {x 0qA}
+set x tail x.TqA.O3
+x = sequence {x 0qA}
+set x tail x.TqA.O4
+x = sequence {x 0qA}
+savepdb x TqA.pdb
+saveamberparm x TqA.top TqA.crd
+check x
+charge x
+Quit

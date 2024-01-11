@@ -1,0 +1,51 @@
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/prep to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/lib to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/parm to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/cmd to search path.
+-f: Source VWB_leapinput.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./VWB_leapinput
+----- Source: ../leaprc
+----- Source of ../leaprc done
+Loading parameters: /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+Reading title:
+GLYCAM PARAMETERS (FOR AMBER 8.0, RESP 0.010), COPYRIGHT CCRC 2004
+Loading Prep file: ../aglycon_04.prep.file
+Loading Prep file: ../ManNAc_Dab_04.prep
+Writing pdb file: VWB.pdb
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+old PREP-specified impropers:
+ <0WA 3>:  C2   C2N  N2   H2N 
+ <0WA 3>:  CME  N2   C2N  O2N 
+ <VWB 2>:  C2   C2N  N2   H2N 
+ <VWB 2>:  CME  N2   C2N  O2N 
+ <0WA 4>:  C2   C2N  N2   H2N 
+ <0WA 4>:  CME  N2   C2N  O2N 
+ total 6 improper torsions applied
+ 6 improper torsions in old prep form
+Building H-Bond parameters.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+Checking 'x'....
+Warning: Close contact of 0.209256 angstroms between .R<0WA 3>.A<C5 21> and .R<VWB 2>.A<O2N 21>
+Warning: Close contact of 2.102381 angstroms between .R<0WA 3>.A<C5 21> and .R<VWB 2>.A<C2N 20>
+Warning: Close contact of 1.320200 angstroms between .R<0WA 3>.A<H5 22> and .R<VWB 2>.A<O2N 21>
+Warning: Close contact of 0.516138 angstroms between .R<0WA 3>.A<H5 22> and .R<VWB 2>.A<C2N 20>
+Warning: Close contact of 1.253033 angstroms between .R<0WA 3>.A<C6 24> and .R<VWB 2>.A<O2N 21>
+Checking parameters for unit 'x'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 5
+Unit is OK.
+Total unperturbed charge:  -0.005000
+Total perturbed charge:    -0.005000
+	Quit

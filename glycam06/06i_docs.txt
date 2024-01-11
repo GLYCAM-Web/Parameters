@@ -1,0 +1,9 @@
+Documentation for the release of GLYCAM_06i.prep and associated leaprc's
+
+2013-08-27 BLFoley
+
+Entries were added for abequose and alpha-L-2-deoxy-rhamnose.  Since this
+	results in new functionality, the prep database letter is incremented.
+
+This release also contains all updates to the prep database through 06h-1.
+

@@ -1,0 +1,11 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../GalNAc_Dab_04.prep
+
+x = sequence {1VB 0VA}
+savepdb x 1VB.pdb
+saveamberparm x 1VB.top 1VB.crd
+check x
+charge x
+Quit

@@ -1,0 +1,151 @@
+# ----- leaprc for loading the glycam04 force field
+#
+#       load atom type hybridizations
+#
+#loadOff solvents.lib 
+#loadOff ions94.lib
+#loadOff all_amino03.lib
+#addAtomTypes {
+        #{ "H"   "H" "sp3" }
+        #{ "HO"  "H" "sp3" }
+        #{ "HS"  "H" "sp3" }
+        #{ "H0"  "H" "sp3" }
+        #{ "H1"  "H" "sp3" }
+        #{ "H2"  "H" "sp3" }
+        #{ "H3"  "H" "sp3" }
+        #{ "H4"  "H" "sp3" }
+        #{ "H5"  "H" "sp3" }
+        #{ "HW"  "H" "sp3" }
+        #{ "HC"  "H" "sp3" }
+        #{ "HA"  "H" "sp3" }
+        #{ "HP"  "H" "sp3" }
+        #{ "OH"  "O" "sp3" }
+        #{ "OS"  "O" "sp3" }
+        #{ "O"   "O" "sp2" }
+        #{ "O2"  "O" "sp2" }
+        #{ "OW"  "O" "sp3" }
+        #{ "CT"  "C" "sp3" }
+        #{ "CH"  "C" "sp3" }
+        #{ "C2"  "C" "sp3" }
+        #{ "C3"  "C" "sp3" }
+        #{ "C"   "C" "sp2" }
+        #{ "C*"  "C" "sp2" }
+        #{ "CA"  "C" "sp2" }
+        #{ "CB"  "C" "sp2" }
+        #{ "CC"  "C" "sp2" }
+        #{ "CN"  "C" "sp2" }
+        #{ "CM"  "C" "sp2" }
+        #{ "CK"  "C" "sp2" }
+        #{ "CQ"  "C" "sp2" }
+        #{ "CD"  "C" "sp2" }
+        #{ "CE"  "C" "sp2" }
+        #{ "CF"  "C" "sp2" }
+##        { "CG"  "C" "sp2" }
+        #{ "CP"  "C" "sp2" }
+        #{ "CI"  "C" "sp2" }
+        #{ "CJ"  "C" "sp2" }
+        #{ "CW"  "C" "sp2" }
+        #{ "CV"  "C" "sp2" }
+        #{ "CR"  "C" "sp2" }
+        #{ "CA"  "C" "sp2" }
+        #{ "CY"  "C" "sp2" }
+        #{ "C0"  "C" "sp2" }
+        #{ "MG"  "Mg" "sp3" }
+        #{ "N"   "N" "sp2" }
+        #{ "NA"  "N" "sp2" }
+        #{ "N2"  "N" "sp2" }
+        #{ "N*"  "N" "sp2" }
+        #{ "NP"  "N" "sp2" }
+        #{ "NQ"  "N" "sp2" }
+        #{ "NB"  "N" "sp2" }
+        #{ "NC"  "N" "sp2" }
+        #{ "NT"  "N" "sp3" }
+        #{ "N3"  "N" "sp3" }
+        #{ "S"   "S" "sp3" }
+        #{ "SH"  "S" "sp3" }
+        #{ "P"   "P" "sp3" }
+        #{ "LP"  ""  "sp3" }
+        #{ "F"   "F" "sp3" }
+        #{ "CL"  "Cl" "sp3" }
+        #{ "BR"  "Br" "sp3" }
+        #{ "I"   "I"  "sp3" }
+        #{ "FE"  "Fe" "sp3" }
+        #{ "IM"  "Cl" "sp3" }
+        ##{ "IP"  "Na" "sp3" } 
+        #{ "IP"  "Na+" "sp3" } 
+#}
+addAtomTypes {
+        { "C"   "C" "sp2" }
+        { "C0"  "C" "sp2" }
+        { "CG"  "C" "sp3" }
+        { "CT"  "C" "sp3" }
+        { "CY"  "C" "sp3" }
+        { "H"   "H" "sp3" }
+        { "H1"  "H" "sp3" }
+        { "H2"  "H" "sp3" }
+        { "HC"  "H" "sp3" }
+        { "HO"  "H" "sp3" }
+        { "HW"  "H" "sp3" }
+        { "N"   "N" "sp2" }
+        { "OH"  "O" "sp3" }
+        { "OS"  "O" "sp3" }
+        { "OY"  "O" "sp3" }
+        { "O"   "O" "sp2" }
+        { "O2"  "O" "sp2" }
+        { "OW"  "O" "sp3" }
+        { "S"   "S" "sp3" }
+        { "P"   "P" "sp3" }
+	{ "IP"  "Na" "sp3" }
+}
+
+addPdbResMap {
+        { 0 "OLP" "NOLP" } { 1 "OLP" "COLP" }
+        { 0 "OLT" "NOLT" } { 1 "OLT" "COLT" }
+        { 0 "HYP" "NHYP" } { 1 "HYP" "CHYP" }
+        { 0 "NLN" "NNLN" } { 1 "NLN" "CNLN" }
+}
+
+
+#
+#       load the main paramter set
+#
+#glycam04 = loadamberparams /usr/local/programs/glycam04/parameters/Glycam_04j.dat
+#parm99 = loadamberparams /usr/local/programs/amber8/dat/leap/parm/parm99.dat
+#glycam04 = loadamberparams /usr/local/programs/glycam04/parameters/Glycam_04l.dat
+#glycam04 = loadamberparams /da08/lachele/A8_info/Glycam_06a.dat
+#source /usr/local/programs/amber8/dat/leap/parm/frcmod.ff03
+#
+#       load all prep files for polysaccharides
+#
+
+#loadamberprep /da08/lachele/A8_info/aglycon_04.prep
+#loadamberprep /da08/lachele/A8_info/Ara_Ldu_04_mod.prep
+#loadamberprep /da08/lachele/A8_info/Ara_Ldu_04_new.prep
+#loadamberprep /da08/lachele/A8_info/Ara_Ddu_04.prep
+#loadamberprep /da08/lachele/A8_info/Glc_Dab_04.prep
+#loadamberprep /da08/lachele/A8_info/Ara_Dab_04.prep
+#loadamberprep /da08/lachele/A8_info/Glc_Dab_04.prep
+
+#loadOff indiv_amino_glycam_prep/glycam_amino06.lib
+#loadOff indiv_amino_glycam_prep/glycam_aminoct06.lib
+#loadOff indiv_amino_glycam_prep/glycam_aminont06.lib
+
+#loadamberprep Rhap4Nac_all.prep
+#loadamberprep /da08/lachele/A8_info/Glycam04.prep
+#loadamberprep /da08/lachele/A8_info/4HA_q.prep
+#loadamberprep /da08/lachele/A8_info/HYD.prep
+#loadamberprep /da08/lachele/A8_info/abequose.prep
+#loadamberprep /da08/lachele/A8_info/ad_abe_ensavg.prep
+#loadamberprep /usr/local/programs/amber8/dat/leap/prep/all_amino94.in
+#loadamberprep /usr/local/programs/amber8/dat/leap/prep/all_amino03.in
+#loadamberprep /usr/local/programs/amber8/dat/leap/prep/all_aminont03.in
+#loadamberprep /usr/local/programs/amber8/dat/leap/prep/all_aminoct03.in
+#
+#       assumes most users want to use tip3p as the explicit solvent model
+#       but this can easily switched by the following commands in leap:
+#       WAT = TP5
+#       loadamberparams frcmod.tip5p
+#
+#HOH = TP3
+#WAT = TP3
+#source leaprc.ff94

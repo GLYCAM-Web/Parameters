@@ -1,0 +1,17 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../All_Dab_04.prep
+
+x = sequence {OME SNA}
+set x tail x.SNA.O2
+x = sequence {x 0NA}
+set x tail x.SNA.O3
+x = sequence {x 0NA}
+set x tail x.SNA.O6
+x = sequence {x 0NA}
+savepdb x SNA.pdb
+saveamberparm x SNA.top SNA.crd
+check x
+charge x
+Quit

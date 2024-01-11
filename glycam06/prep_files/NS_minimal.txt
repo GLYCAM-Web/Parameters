@@ -1,0 +1,7 @@
+2014-03-27 BLFoley
+
+The file NS_minimal.prep contains the prep database for N-sulfated residues
+that are used in the GAG builder at GLYCAM-Web.  It is called "minimal"
+because it contains only those residues necessary for the GAG builder to
+function.
+

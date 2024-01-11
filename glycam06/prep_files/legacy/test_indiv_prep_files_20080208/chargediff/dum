@@ -1,0 +1,11 @@
+cp Fru_f_result.dat Fru_f_result.short
+cp Fuc_p_result.dat Fuc_p_result.short 
+cp Gal_p_result.dat Gal_p_result.short 
+cp Glc_p_result.dat Glc_p_result.short 
+cp ManNAc_p_result.dat ManNAc_p_result.short 
+cp Psi_f_result.dat Psi_f_result.short 
+cp Rha_p_result.dat Rha_p_result.short 
+cp Sor_f_result.dat Sor_f_result.short 
+cp Sor_p_result.dat Sor_p_result.short 
+cp Tag_f_result.dat Tag_f_result.short 
+

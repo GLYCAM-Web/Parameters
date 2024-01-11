@@ -1,0 +1,40 @@
+DOCUMENTATION OF CHANGES TO GLYCAM_06EP FILES
+---------------------------------------------
+Jodi Hadden 20110922
+
+
+GLYCAM_06EP.prep
+----------------
+
+Version		Changes from previous
+
+1		Fixed typo: Changed H30 to H3O in a significant number of residues
+
+a		Addition of ROH residue
+		Addition of residues for building fructose
+		Changed old 1GA convention to new 0GA convention
+
+
+GLYCAM_06EP.dat
+--------------
+
+Version		Changes from previous
+
+1		Added line before bonded section consistent with newer verions of parameter files
+			Without this extra line, leap failed to find the first bond parameter in the list: CG-CG
+		Removed H3 atom type from nonbonded section
+			Atom type was undefined anywhere else in the force field and caused leap to issue a warning
+		Added missing parameters that made it impossible to build basic molecules like glucose
+			These were not derived, but copied from other parameters as done in other versions of GLYCAM
+			> OH-CG-OS    100.00    112.00   Copy of OS-CG-OS (not derived) JAH
+			> HO-OH-CG-H2   1           0.18           0.00           3.  SCEE=1.0, SCNB=1.0, Copy of HO-OH-CG-H1 (not derived) JAH
+			> HO-OH-CG-OS   1           0.18           0.00           3.  SCEE=1.0, SCNB=1.0, Copy of HO-OH-CG-CG (not derived) JAH
+			> OH-CG-OS-CG   1           0.55         300.00          -1.  SCEE=1.0, SCNB=1.0, Copy of OS-CG-OS-CG (not derived) JAH
+			>               1           0.60           0.00          -2.
+			>               1           0.20          60.00           3.
+		Corrected EP mass and nonbond parameters to match that of TIP5P EP, as was originally intended
+			Mass was given as 3.0, when EP should have be a "zero-mass point charge"
+			Nonbond parameter for VDW radius was given as 0.0, causing leap to assign a "default" radius that did not match TIP5P EP
+
+a		Added 1-4 scaling information (SCEE=1.0 SCNB=1.0) used by newer versions of LEaP to assign carbohydrate scaling factors
+		Updated formatting to be consistent with newer versions of parameter files

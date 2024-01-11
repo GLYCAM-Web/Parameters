@@ -1,0 +1,17 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../Alt_Lab_04.prep
+
+x = sequence {OME SeA}
+set x tail x.SeA.O2
+x = sequence {x 0eA}
+set x tail x.SeA.O3
+x = sequence {x 0eA}
+set x tail x.SeA.O6
+x = sequence {x 0eA}
+savepdb x SeA.pdb
+saveamberparm x SeA.top SeA.crd
+check x
+charge x
+Quit

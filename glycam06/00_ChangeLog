@@ -1,0 +1,21 @@
+
+====================================================
+Change log opened on 20110830 by BLFoley
+
+Directory: glycam:/ln/params/glycam06
+
+Purpose:  This directory will contain official versions of GLYCAM parameters.
+
+Directory contents:
+
+	00_ChangeLog	This file
+
+	leapinput	Directory that will contain leaprc files
+
+	legacy		Directory to house historical data, e.g., old
+				parameters and documentation
+
+	parameters	Directory that will contain Glycam parameters
+
+	prep_files	Directory that will contain Glycam prep files and
+				libraries

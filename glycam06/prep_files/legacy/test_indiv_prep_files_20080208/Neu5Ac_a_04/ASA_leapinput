@@ -1,0 +1,19 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../Neu5Ac_a_04.prep
+
+x = sequence {OME ASA}
+set x tail x.ASA.O4
+x = sequence {x 0SA}
+set x tail x.ASA.O7
+x = sequence {x 0SA}
+set x tail x.ASA.O8
+x = sequence {x 0SA}
+set x tail x.ASA.O9
+x = sequence {x 0SA}
+savepdb x ASA.pdb
+saveamberparm x ASA.top ASA.crd
+check x
+charge x
+Quit

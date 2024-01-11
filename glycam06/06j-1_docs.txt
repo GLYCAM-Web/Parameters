@@ -1,0 +1,14 @@
+2014-03-13 BLFoley
+
+The 06j-1 parameter set now makes ff12SB into the default compatible
+protein force field.
+
+* The leaprc was changed in these ways:
+
+	It now loads amino acid libraries for ff12SB 
+	It now loads the new 06j-1 prep file
+	It now loads the atomic_ions.lib, the updated ions library
+
+* The prep file was incremented to 06j-1 as well because the ZOLT and
+	ZOLS entries now have atom types to match ff12SB.
+

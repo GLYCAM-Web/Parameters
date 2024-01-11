@@ -1,0 +1,35 @@
+#!/bin/csh -f
+#Runs all resp files in a directory.
+#User should modify the following
+# Set these variables as well as fix the resp.in file before running.
+source ~Wise/.cshrc
+setenv GAUPREFIX 'COLY_q'                                                                          
+setenv OUTPUTFILE 'Ensemble_Charges.out'
+setenv ATOMS '31'
+
+foreach LOG (`ls $GAUPREFIX*.log`)
+        echo "Getting ESP charges on $LOG"
+        sed -n '/points will be used for fitting atomic charges/p' $LOG > count
+        /e14/programs/local/other/AUTOMATED_ENSEMBLE_AVERAGING/formatAtomNumEsp.pl 's/points will be used for fitting atomic charges//g' count
+        /e14/programs/local/other/AUTOMATED_ENSEMBLE_AVERAGING/formatAtomNumEsp.pl 's/  //g' count
+	echo "$ATOMS" >> count
+	f77 ./readit.f >& /dev/null
+	grep "Atomic Center " $LOG > a
+	grep "ESP Fit" $LOG > b
+	grep "Fit    " $LOG > c
+	./a.out
+	rm -f a b c a.out readit.o
+        echo "Running Resp"
+        /e14/programs/local/bin/resp -O \
+                -i resp.in \
+                -o $LOG.resp.out \
+                -p $LOG.resp.pch \
+                -e esp.dat \
+                -t $LOG.q.out
+        rm -f esp.dat count esout
+end
+# Comment out the section below for Non-Averaged Charges
+#echo "Charges developed... Now averaging."
+#/e14/programs/local/other/AUTOMATED_ENSEMBLE_AVERAGING/Average_RESP_Charges.pl $GAUPREFIX $OUTPUTFILE $ATOMS
+#echo "Charges averaged in the file: $OUTPUTFILE"
+

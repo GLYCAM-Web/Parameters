@@ -1,0 +1,6 @@
+logfile Get_Fru_f_O2_position.leaplog
+source leaprc.Glycam_06
+fruf_2cD_O2 = sequence { ROH 0cD }
+savepdb fruf_2cD_O2 fruf_2cD_O2.pdb
+fruf_2cU_O2 = sequence { ROH 0cU }
+savepdb fruf_2cU_O2 fruf_2cU_O2.pdb 

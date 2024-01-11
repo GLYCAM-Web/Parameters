@@ -1,0 +1,63 @@
+===============================================================================
+2014-02-14 BLFoley 
+
+Added parameters version j.
+
+===========================================================
+2013-08-29 BLFoley
+
+Added leaprc.GLYCAM_06i and leaprc.GLYCAM_06i-12SB for use
+	with the 06i prep file.
+===========================================================
+2013-08-16 BLFoley
+
+Added leaprc.GLYCAM-06h-2 and leaprc.GLYCAM_06h-12SB-1
+	that reference GLYCAM_06h-1.prep.
+===========================================================
+20111024 JAHadden
+
+Added legacy/ directory
+
+Moved leaprc.Glycam_04EP to legacy/
+	Find an updated version of this in
+	/ln/params/glycam06ep
+
+Added leaprc.GLYCAM_06
+	An updated version of leaprc.Glycam_06
+	Created to make the leaprc more stand-alone
+	And consistent with others created for 04 and 06EP
+	This version was added to the AMBER git tree
+===========================================================
+20110915 BLFoley
+
+Moving directory to /ln/params/glycam06
+
+===========================================================
+20100514 BLFoley
+
+Changing leaprc to load ff99SB
+
+===========================================================
+20080222 BLFoley
+
+-- changed leaprc.Glycam_06 to automatically load libaries
+
+Change log begun on 2008021 by BLFoley
+
+-- copied this from the glycam04 tree
+	leaprc.Glycam_04EP
+
+-- modified web-builder leaprc's into these
+	leaprc.Glycam_06
+	leaprc.Glycam_06_carb_only
+	leaprc.GlycoProteins_ff99
+
+-- copied and modified Matt's lipid leaprc into this:
+	leaprc.Glycam_06_lipids
+
+-- created a documents directory
+	./docs
+
+-- opened tleap, made verbosity one for leap logfile below
+	and sourced leaprc.Glycam_06 to make sure nominally sane.
+		leaplog_test_leaprc_Glycam_06.prep

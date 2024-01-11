@@ -1,0 +1,73 @@
+This directory contains information relevant to the amino acid
+residues commonly used for linking sugars to proteins.  The prep
+files have been outdated, but they are included here for completeness.
+The proper files to use are the library files.
+
+# BLFoley
+
+	Changed N to N3 for OLS and OLT in one or two N-terminal libraries.
+
+# BLFoley
+Files in this directory as of 20090508:
+
+        Prep files for mid-chain and terminal residues:
+		Glycam_06_amino.in     
+		Glycam_06_aminont.in
+		Glycam_06_aminoct.in   
+
+        Off libraries for mid-chain and terminal residues:
+		Glycam_06_amino.lib      
+		Glycam_06_aminont.lib
+		Glycam_06_aminoct.lib  
+
+	README (this file)
+
+	Reason for this change:  Found disagreement in atom types between OLT and
+		COLT residues in the library.  Changing for OLS, OLT in the prep and 
+		library files.  Changing all to be "OG1" as in the mid-chain file.
+
+	Backups made for this change
+		Glycam_06_aminoct_C.lib Glycam_06_aminont_C.lib
+		Glycam_06_aminoct_C.in Glycam_06_aminont_C.in
+		
+	Backups from previous changes
+		Glycam_06_aminont_B.in   Glycam_06_aminont_A.in   
+		Glycam_06_aminont_B.lib  Glycam_06_aminont_A.lib  
+
+
+# MBTessier
+Files in this directory as of 20090427:
+
+        Prep files for mid-chain and terminal residues:
+                Glycam_06_amino.in
+                Glycam_06_aminoct.in
+                Glycam_06_aminont.in
+
+        Off libraries for mid-chain and terminal residues:
+                Glycam_06_amino.lib
+                Glycam_06_aminoct.lib
+                Glycam_06_aminont.lib
+
+        README (this file)
+	
+	Backups for changed prep and library files:
+		Glycam_06_aminont_A.in		# Original build, type N, not N3 used
+		Glycam_06_aminont_A.lib		# Original build, type N, not N3 used
+                Glycam_06_aminont_B.in		# 2009-04-27 build, type N3 used for N-terminus
+                Glycam_06_aminont_B.lib 	# 2009-04-27 build, type N3 used for N-terminus
+
+
+# BLFoley
+Files in this directory as of 20080221:
+
+	Prep files for mid-chain and terminal residues:
+		Glycam_06_amino.in
+		Glycam_06_aminoct.in
+		Glycam_06_aminont.in
+	
+	Off libraries for mid-chain and terminal residues:
+		Glycam_06_amino.lib
+		Glycam_06_aminoct.lib
+		Glycam_06_aminont.lib
+	
+	README (this file)

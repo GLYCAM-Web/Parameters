@@ -1,0 +1,17 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../Man_Dab_04.prep
+
+x = sequence {OME RMA}
+set x tail x.RMA.O2
+x = sequence {x 0MA}
+set x tail x.RMA.O4
+x = sequence {x 0MA}
+set x tail x.RMA.O6
+x = sequence {x 0MA}
+savepdb x RMA.pdb
+saveamberparm x RMA.top RMA.crd
+check x
+charge x
+Quit

@@ -1,0 +1,15 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../GlcA_Dab_04.prep
+
+x = sequence {OME WZA}
+set x tail x.WZA.O3
+x = sequence {x 0ZA}
+set x tail x.WZA.O4
+x = sequence {x 0ZA}
+savepdb x WZA.pdb
+saveamberparm x WZA.top WZA.crd
+check x
+charge x
+Quit

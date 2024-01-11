@@ -1,0 +1,50 @@
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/prep to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/lib to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/parm to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/cmd to search path.
+-f: Source YuB_leapinput.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./YuB_leapinput
+----- Source: ../leaprc
+----- Source of ../leaprc done
+Loading parameters: /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+Reading title:
+GLYCAM PARAMETERS (FOR AMBER 8.0, RESP 0.010), COPYRIGHT CCRC 2004
+Loading Prep file: ../aglycon_04.prep.file
+Loading Prep file: ../IdA_Lab_04.prep
+Writing pdb file: YuB.pdb
+Checking Unit.
+WARNING: The unperturbed charge of the unit: -3.000000 is not zero.
+
+ -- ignoring the warning.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+old PREP-specified impropers:
+ <0uA 3>:  C5   O6A  C6   O6B 
+ <YuB 2>:  C5   O6A  C6   O6B 
+ <0uA 4>:  C5   O6A  C6   O6B 
+ total 3 improper torsions applied
+ 3 improper torsions in old prep form
+Building H-Bond parameters.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+Checking 'x'....
+WARNING: The unperturbed charge of the unit: -3.000000 is not zero.
+Warning: Close contact of 1.551379 angstroms between .R<0uA 3>.A<H1 2> and .R<YuB 2>.A<H3O 8>
+Warning: Close contact of 2.163830 angstroms between .R<OME 1>.A<H2 3> and .R<YuB 2>.A<O6B 17>
+Checking parameters for unit 'x'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 3
+Unit is OK.
+Total unperturbed charge:  -3.000000
+Total perturbed charge:    -3.000000
+	Quit

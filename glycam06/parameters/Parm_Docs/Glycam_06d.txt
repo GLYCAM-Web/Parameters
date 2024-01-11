@@ -1,0 +1,34 @@
+#### Change log for 2011-09-15 ####
+
+Changed by BLFoley to create Glycam_06d-1.dat
+
+Corrected typo in torsion:
+-NH-CG-CG-SM   1    0.45          0.0            -3.         SCEE=1.0 SCNB=1.0 Thiol-linkages
++N -CG-CG-SM   1    0.45          0.0            -3.         SCEE=1.0 SCNB=1.0 Thiol-linkages
+
+
+#### Change log for 2008-05-12 ####
+
+-- updated torsion parameters for SM terms
+	CG-CG-SM-CG
+	SM-CG-CG-HC
+	SM-CG-CG-H1
+	CG-CG-CG-SM
+
+CG-CG-SM-CG   1    0.32          0.0            -3.         ***G06 Ethyl(methyl)sulfane
+              1    0.35          0.0            -2.
+              1    0.35          0.0             1.
+SM-CG-CG-HC   1    0.08          0.0             3.         ***G06 Ethyl(methyl)sulfane
+SM-CG-CG-H1   1    0.15          0.0            -3.         ***G06 2-Methoxyethyl(methyl)sulfane
+              1   -0.05          0.0            -2
+              1    0.04          0.0             1
+CG-CG-CG-SM   1    0.01          0.0            -3.         ***G06 Propyl(methyl)sulfane
+              1    0.20          0.0            -2.
+              1    0.51          0.0             1.
+
+
+-- updated the contributors list, added:
+	Austin Yongye
+	Matthew Tessier
+	Sameer Kawatkar
+

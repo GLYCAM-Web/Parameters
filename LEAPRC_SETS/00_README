@@ -1,0 +1,10 @@
+2014-03-14 BLFoley
+
+This directory contains complete* parameter sets associated with specific
+leaprc files.  Because we version all files now, it will be possible to
+determine the most recent set, and that information should supersede any
+dates assigned to the files.  That is, a set for an older leaprc might
+get made at a date later than a new one.  
+
+* Complete means all the parameters supplied by GLYCAM.  Additional files
+associated with solvent, ions or protein are not included.

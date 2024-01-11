@@ -1,0 +1,60 @@
+Documentation for the releases of GLYCAM_06h and GLYCAM_06EPb
+20120426 BLFoley
+
+
+Earlier documentation:
+
+For full GLYCAM_06 documentation, please see glycam.org/params
+
+
+Current changes overview:
+
+These releases make very few changes in the functioning of the force
+fields.  However, there have been extensive formatting changes.
+
+It is important to note that these files will not work with previous
+releases of GLYCAM parameters.  For this reason, all files were 
+promoted to the same version (06h or 06EPb).
+
+
+Known limitations:
+
+The amino acid libraries for N- and O-linking glycans still have older,
+parm94/99-style atom type names.  They will build molecules when used
+with the newer protein force fields, but the parameters used in the 
+linking proteins will still be old.  In version 06h-1, to be released 
+soon, the amino acid linking files will be fully compatible with ff12SB.  
+
+
+Summary of changes:
+
+* Atom type names were changed to fit a new uppercase-lowercase format. 
+	That is, CG was changed to Cg, HO was changed to Ho and so forth.
+
+	The purpose of these changes is to ensure orthoganilty between 
+	GLYCAM parameters and those of other force fields.
+
+* The prep file databases for the main 06 and 06EP sets (not including 
+	lipids) were expanded and many corrections were made. 
+
+	The new entries should be more geometrically realistic and more 
+	stable when used in leap.  These changes should allow more residues
+	to be built than was possible before.  Residues built before these
+	changes are expected to have been built correctly, but their 
+	geometries might differ in minor ways.
+
+* A new van der Waals term was added for hydroxyl hydrogens. 
+
+	The term is very insubstantial in the course of a normal simulation. 
+	It was designed only to prevent catastrophic charge-charge collapses 
+	that can occur in certain circumstances.
+
+* Parameters appropriate to the protein force fields, to the extent they 
+	exist in our data set, were modified to be usable with ff12SB. 
+
+	Please see also "Known limitations", above.
+
+* The 06h leaprc was modified to call ion libraries consistent with ff12SB.
+
+* The 06EPb leaprc was modified to load TIP5P waters by default.
+

@@ -1,0 +1,17 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../Neu5Ac_a_04.prep
+
+x = sequence {OME DSA}
+set x tail x.DSA.O4
+x = sequence {x 0SA}
+set x tail x.DSA.O7
+x = sequence {x 0SA}
+set x tail x.DSA.O9
+x = sequence {x 0SA}
+savepdb x DSA.pdb
+saveamberparm x DSA.top DSA.crd
+check x
+charge x
+Quit

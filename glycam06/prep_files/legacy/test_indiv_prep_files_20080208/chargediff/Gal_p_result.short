@@ -1,0 +1,82 @@
+Checking D residue 1LA . . . found match: 1lA Charges are identical.
+Checking D residue 0LA . . . found match: 0lA Charges are identical.
+Checking D residue 2LA . . . found match: 2lA Charges are identical.
+Checking D residue 3LA . . . found match: 3lA Charges are identical.
+Checking D residue 4LA . . . found match: 4lA Charges are identical.
+Checking D residue 6LA . . . found match: 6lA Charges are identical.
+Checking D residue ZLA . . . found match: ZlA Charges are identical.
+Checking D residue YLA . . . found match: YlA Charges are identical.
+Checking D residue XLA . . . found match: XlA Charges are identical.
+Checking D residue WLA . . . found match: WlA Charges are identical.
+Checking D residue VLA . . . found match: VlA Charges are identical.
+Checking D residue ULA . . . found match: UlA Charges are identical.
+Checking D residue TLA . . . found match: TlA Charges are identical.
+Checking D residue SLA . . . found match: SlA Charges are identical.
+Checking D residue RLA . . . found match: RlA Charges are identical.
+Checking D residue QLA . . . found match: QlA Charges are identical.
+Checking D residue PLA . . . found match: PlA Charges are identical.
+Checking D residue 1LB . . . found match: 1lB Charges are identical.
+Checking D residue 0LB . . . found match: 0lB Charges are identical.
+
+Checking D residue 6LB . . . found match: 6lB
+
+The charges differ.  Details follow
+	Raw average difference: 0.000000
+	RMSD: 0.000548
+
+	N	T	CD	CL	CD-CL	100*(CD-CL)/CD 
+	C1	CG	0.374000	0.374000	0.000000	0.000000 : 
+	O5	OS	-0.402000	-0.402000	0.000000	-0.000000 : 
+	C5	CG	0.140000	0.140000	0.000000	0.000000 : 
+	C4	CG	0.203000	0.203000	0.000000	0.000000 : 
+	O4	OH	-0.664000	-0.664000	0.000000	-0.000000 : 
+	H4O	HO	0.437000	0.437000	0.000000	0.000000 : 
+	C3	CG	0.259000	0.259000	0.000000	0.000000 : 
+	O3	OH	-0.695000	-0.694000	-0.001000	0.143885 : 
+	H3O	HO	0.433000	0.433000	0.000000	0.000000 : 
+	C2	CG	0.357000	0.357000	0.000000	0.000000 : 
+	O2	OH	-0.727000	-0.726000	-0.001000	0.137552 : 
+	H2O	HO	0.432000	0.432000	0.000000	0.000000 : 
+	C6	CG	0.319000	0.319000	0.000000	0.000000 : 
+	O6	OS	-0.466000	-0.468000	0.002000	-0.429185 : 
+
+
+Checking D residue 4LB . . . found match: 4lB Charges are identical.  
+Checking D residue 3LB . . . found match: 3lB Charges are identical.  
+Checking D residue 2LB . . . found match: 2lB Charges are identical.  
+
+Checking D residue ULB . . . found match: UlB
+The charges differ.  Details follow
+	RMSD: 0.000459
+
+Checking D residue VLB . . . found match: VlB 
+The charges differ.  Details follow
+	RMSD: 0.000324
+
+
+Checking D residue XLB . . . found match: XlB
+The charges differ.  Details follow
+	RMSD: 0.000324
+
+
+Checking D residue WLB . . . found match: WlB Charges are identical.  
+Checking D residue YLB . . . found match: YlB Charges are identical.  
+Checking D residue ZLB . . . found match: ZlB Charges are identical.  
+
+Checking D residue QLB . . . found match: QlB
+The charges differ.  Details follow
+	RMSD: 0.000471
+
+Checking D residue RLB . . . found match: RlB 
+The charges differ.  Details follow
+	RMSD: 0.000333
+
+Checking D residue SLB . . . found match: SlB
+The charges differ.  Details follow
+	RMSD: 0.000333
+
+Checking D residue TLB . . . found match: TlB Charges are identical.
+
+Checking D residue PLB . . . found match: PlB
+The charges differ.  Details follow
+	RMSD: 0.000594

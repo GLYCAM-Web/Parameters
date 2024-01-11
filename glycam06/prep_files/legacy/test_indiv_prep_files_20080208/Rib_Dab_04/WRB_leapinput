@@ -1,0 +1,15 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../Rib_Dab_04.prep
+
+x = sequence {OME WRB}
+set x tail x.WRB.O3
+x = sequence {x 0RA}
+set x tail x.WRB.O4
+x = sequence {x 0RA}
+savepdb x WRB.pdb
+saveamberparm x WRB.top WRB.crd
+check x
+charge x
+Quit

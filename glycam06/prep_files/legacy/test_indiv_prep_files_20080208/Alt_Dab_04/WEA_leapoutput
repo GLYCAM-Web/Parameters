@@ -1,0 +1,66 @@
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/prep to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/lib to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/parm to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/cmd to search path.
+-f: Source WEA_leapinput.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./WEA_leapinput
+----- Source: ../leaprc
+----- Source of ../leaprc done
+Loading parameters: /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+Reading title:
+GLYCAM PARAMETERS (FOR AMBER 8.0, RESP 0.010), COPYRIGHT CCRC 2004
+Loading Prep file: ../aglycon_04.prep.file
+Loading Prep file: ../Alt_Dab_04.prep
+Writing pdb file: WEA.pdb
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 0 improper torsions applied
+Building H-Bond parameters.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+Checking 'x'....
+Warning: Close contact of 2.165767 angstroms between .R<0EA 3>.A<H4 12> and .R<0EA 4>.A<O4 13>
+Warning: Close contact of 0.485153 angstroms between .R<0EA 3>.A<C5 15> and .R<0EA 4>.A<H5 16>
+Warning: Close contact of 1.369073 angstroms between .R<0EA 3>.A<C5 15> and .R<0EA 4>.A<H3O 10>
+Warning: Close contact of 0.607393 angstroms between .R<0EA 3>.A<H5 16> and .R<WEA 2>.A<H5 13>
+Warning: Close contact of 0.817615 angstroms between .R<0EA 3>.A<H5 16> and .R<0EA 4>.A<H5 16>
+Warning: Close contact of 1.796495 angstroms between .R<0EA 3>.A<O5 17> and .R<WEA 2>.A<O4 11>
+Warning: Close contact of 0.664881 angstroms between .R<0EA 3>.A<O5 17> and .R<0EA 4>.A<H3O 10>
+Warning: Close contact of 1.750668 angstroms between .R<0EA 3>.A<C6 18> and .R<0EA 4>.A<O5 17>
+Warning: Close contact of 1.930562 angstroms between .R<0EA 3>.A<C6 18> and .R<0EA 4>.A<H5 16>
+Warning: Close contact of 0.435310 angstroms between .R<0EA 3>.A<C6 18> and .R<0EA 4>.A<C5 15>
+Warning: Close contact of 1.491898 angstroms between .R<0EA 3>.A<C6 18> and .R<0EA 4>.A<C4 11>
+Warning: Close contact of 1.782724 angstroms between .R<0EA 3>.A<H61 19> and .R<0EA 4>.A<H4 12>
+Warning: Close contact of 0.433870 angstroms between .R<0EA 3>.A<H61 19> and .R<0EA 4>.A<C4 11>
+Warning: Close contact of 0.944940 angstroms between .R<0EA 3>.A<H61 19> and .R<0EA 4>.A<C3 7>
+Warning: Close contact of 1.375810 angstroms between .R<0EA 3>.A<H62 20> and .R<0EA 4>.A<C6 18>
+Warning: Close contact of 0.500760 angstroms between .R<0EA 3>.A<H62 20> and .R<0EA 4>.A<C5 15>
+Warning: Close contact of 1.975833 angstroms between .R<0EA 3>.A<H62 20> and .R<0EA 4>.A<C4 11>
+Warning: Close contact of 0.988775 angstroms between .R<0EA 3>.A<O6 21> and .R<WEA 2>.A<H62 17>
+Warning: Close contact of 0.227417 angstroms between .R<0EA 3>.A<O6 21> and .R<0EA 4>.A<O5 17>
+Warning: Close contact of 1.088517 angstroms between .R<0EA 3>.A<O6 21> and .R<0EA 4>.A<C1 1>
+Warning: Close contact of 0.119584 angstroms between .R<0EA 3>.A<H6O 22> and .R<WEA 2>.A<H62 17>
+Warning: Close contact of 1.759360 angstroms between .R<0EA 3>.A<H6O 22> and .R<WEA 2>.A<C6 15>
+Warning: Close contact of 0.456084 angstroms between .R<0EA 3>.A<H6O 22> and .R<0EA 4>.A<O5 17>
+Warning: Close contact of 2.211923 angstroms between .R<WEA 2>.A<H6O 19> and .R<0EA 4>.A<H6O 22>
+Warning: Close contact of 0.285613 angstroms between .R<WEA 2>.A<H6O 19> and .R<0EA 4>.A<O6 21>
+Warning: Close contact of 1.968352 angstroms between .R<WEA 2>.A<H6O 19> and .R<0EA 4>.A<C6 18>
+Warning: Close contact of 1.347740 angstroms between .R<WEA 2>.A<O6 18> and .R<0EA 4>.A<O6 21>
+Warning: Close contact of 0.405460 angstroms between .R<WEA 2>.A<H62 17> and .R<0EA 4>.A<O5 17>
+Checking parameters for unit 'x'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 28
+Unit is OK.
+Total unperturbed charge:   0.000000
+Total perturbed charge:     0.000000
+	Quit

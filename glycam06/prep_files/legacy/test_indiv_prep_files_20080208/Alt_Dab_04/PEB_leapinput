@@ -1,0 +1,19 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../Alt_Dab_04.prep
+
+x = sequence {OME PEB}
+set x tail x.PEB.O2
+x = sequence {x 0EA}
+set x tail x.PEB.O3
+x = sequence {x 0EA}
+set x tail x.PEB.O4
+x = sequence {x 0EA}
+set x tail x.PEB.O6
+x = sequence {x 0EA}
+savepdb x PEB.pdb
+saveamberparm x PEB.top PEB.crd
+check x
+charge x
+Quit

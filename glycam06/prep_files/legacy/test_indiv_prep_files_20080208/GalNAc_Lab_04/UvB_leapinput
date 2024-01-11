@@ -1,0 +1,15 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../GalNAc_Lab_04.prep
+
+x = sequence {OME UvB}
+set x tail x.UvB.O4
+x = sequence {x 0vA}
+set x tail x.UvB.O6
+x = sequence {x 0vA}
+savepdb x UvB.pdb
+saveamberparm x UvB.top UvB.crd
+check x
+charge x
+Quit

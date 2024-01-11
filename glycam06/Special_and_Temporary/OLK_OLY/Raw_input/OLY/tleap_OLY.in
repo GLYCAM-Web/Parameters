@@ -1,0 +1,42 @@
+source leaprc.GLYCAM_06j-1
+source leaprc.ff12SB
+loadamberparams ./frcmod.ff12SB.extra
+
+loadamberprep ./OLY.prep
+
+remove OLY OLY.1.C1
+remove OLY OLY.1.H1
+remove OLY OLY.1.H2
+remove OLY OLY.1.H3
+remove OLY OLY.1.C2
+remove OLY OLY.1.O1
+remove OLY OLY.1.N2
+remove OLY OLY.1.H15
+remove OLY OLY.1.C13
+remove OLY OLY.1.H16
+remove OLY OLY.1.H17
+remove OLY OLY.1.H18
+remove OLY OLY.1.C9
+remove OLY OLY.1.H10
+remove OLY OLY.1.H11
+remove OLY OLY.1.H12
+
+mol = loadpdb ./OLY.pdb
+
+set mol tail mol.1.N
+set ACE head ACE.1.C
+mol=sequence {mol ACE}
+
+set mol tail mol.1.C
+set NME head NME.1.N
+mol=sequence {mol NME}
+
+set mol tail mol.1.O2
+set 0GA head 0GA.1.C1
+mol=sequence {mol 0GA}
+
+charge mol
+saveamberparm mol test_OLY.prmtop test_OLY.rst7
+savepdb mol test_OLY.pdb
+quit
+

@@ -1,0 +1,17 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../GalA_Dab_04.prep
+
+x = sequence {OME TOA}
+set x tail x.TOA.O2
+x = sequence {x 0OA}
+set x tail x.TOA.O3
+x = sequence {x 0OA}
+set x tail x.TOA.O4
+x = sequence {x 0OA}
+savepdb x TOA.pdb
+saveamberparm x TOA.top TOA.crd
+check x
+charge x
+Quit

@@ -1,0 +1,28 @@
+Documentation for GLYCAM_06j
+
+LEAPRC files
+
+* The main leaprc file was updated to reflect the new parameters.
+    This file is compatible with ff10.
+
+* The additional, 12SB leaprc file was updated similarly.
+    This file is compatible with ff12SB.
+
+PREP and LIB files
+
+* The atom type for CA was changed to CX.
+    This change makes it compatible with ff10, ff13, ff12SB and ff13SB.
+
+* A mistake in the ZOLT prep file was corrected so tht the atom types
+    for HG21, HG22 & HG23 are HC (rather than Hc).  
+    This ensures compatibility with protein force fields.
+
+* A set of lib files was generated with atom types compatible with
+    ff12SB and ff13SB.
+
+PARAMETER files
+
+* Parameters were added so that ff10 and ff13 are supported.
+
+* "use by permission only" was removed from the Ho van der Waals term.
+

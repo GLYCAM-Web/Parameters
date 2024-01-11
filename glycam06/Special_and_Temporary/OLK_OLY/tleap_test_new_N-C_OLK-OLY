@@ -1,0 +1,40 @@
+#source leaprc.ff12SB
+source leaprc.ff14SB
+source leaprc.GLYCAM_06j-1
+loadamberparams frcmod_interim_OLK-OLY
+loadOff aminont12_NOLK-NOLY_interim.lib
+loadOff aminoct12_COLK-COLY_interim.lib
+
+m1 = sequence { NOLK ALA }
+set m1 tail m1.1.O2
+m1 = sequence { m1 0GB }
+impose m1 { 3 } { { "C1" "O2" "CD" "CE" -120.0 } }
+check m1
+savepdb m1 new-NOLK.pdb
+saveamberparm m1 new-NOLK.parm7 new-NOLK.rst7
+
+m1 = sequence { NOLY ALA }
+set m1 tail m1.1.O2
+m1 = sequence { m1 0GB }
+impose m1 { 3 } { { "C1" "O2" "CZ" "CE2" 90.0 } }
+check m1
+savepdb m1 new-NOLY.pdb
+saveamberparm m1 new-NOLY.parm7 new-NOLY.rst7
+
+m2 = sequence { ALA COLK }
+set m2 tail m2.2.O2
+m2 = sequence { m2 0GB }
+impose m2 { 3 } { { "C1" "O2" "CD" "CE" -120.0 } }
+check m2
+savepdb m2 new-COLK.pdb
+saveamberparm m2 new-COLK.parm7 new-COLK.rst7
+
+m2 = sequence { ALA COLY }
+set m2 tail m2.2.O2
+m2 = sequence { m2 0GB }
+impose m2 { 3 } { { "C1" "O2" "CZ" "CE2" 90.0 } }
+check m2
+savepdb m2 new-COLY.pdb
+saveamberparm m2 new-COLY.parm7 new-COLY.rst7
+
+quit

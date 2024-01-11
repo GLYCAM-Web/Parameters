@@ -1,0 +1,50 @@
+The following parameters were added to Glycam_06.dat to make Glycam_06a.dat
+The phosphate valence terms were adopted from Parm94.dat
+
+S  32.06                             sulphur in sulphates ABY 03/15/05
+P  30.97                             phosphate in phosphates ABY 04/24/05
+
+Bonds:
+P -OS  230.0    1.610       Parm94
+P -O2  525.0    1.480       Parm94
+S -OS  206.0    1.589       K calculated from methyl sulphate (eqm value from THEOCHEM 395/396 (1997) 107-122)
+S -O2  620.0    1.440       K calculated from methyl sulphate (eqm value from THEOCHEM 395/396 (1997) 107-122)
+
+Angles:
+OS-P -OS     45.0     102.6    Parm94
+P -OS-CG     50.0     121.0    K calculated from dimethyl phosphate (eqm value from crystal average)
+O2-P -OS    100.0     108.2    Parm94
+O2-P -O2    140.0     119.9    Parm94
+O2-S -O2    123.0     113.91   K calculated from methyl sulphate  (eqm value from THEOCHEM 395/396 (1997) 107-122)
+S -OS-CG     50.0     118.88   K calculated from methyl sulphate  (eqm value from THEOCHEM 395/396 (1997) 107-122)
+O2-S -OS    104.0     106.87   K calculated from methyl sulphate  (eqm value from THEOCHEM 395/396 (1997) 107-122)
+OH-CG-C      63.00    112.36   Glycam_93 (taken from OS-CG-C) - for N-glycolyl
+
+Dihedral angles:
+C -CG-OH-HO   1    0.9           0.0             2          2-Hydroxy ethanamide
+O -C -CG-H1   1    0.0           0.0             3          2-Hydroxy ethanamide
+N -C -CG-H1   1    0.0           0.0             3          2-Hydroxy ethanamide (coupled to O -C -CG-H1)
+N -C -CG-OH   1    0.20          0.0            -3          2-Hydroxy ethanamide
+              1   -2.21          0.0            -2
+              1    2.24          0.0             1
+O -C -CG-OH   1    0.0           0.0             3          2-Hydroxy ethanamide (coupled to N -C -CG-OH)
+H1-CG-OS-P    1    0.07          0.0             3.         Dimethyl phosphate
+OS-P -OS-CG   1    0.50          0.0            -3.         Dimethyl phosphate
+              1    0.70          0.0             2.
+O2-P -OS-CG   1    0.10          0.0            -3.         Dimethyl phosphate
+              1   -0.50          0.0            -2.
+              1    0.10          0.0             1
+P -OS-CG-CG   1    0.10          0.0            -3          Methyl ethyl phosphate
+              1    0.05          0.0            -2
+              1   -1.20          0.0             1
+H2-CG-OS-P    1    0.07          0.0             3.         Dimethyl phosphate
+OS-CG-OS-P    1    0.40          0.0            -3          Methoxy methyl methyl phosphate
+              1    0.40          0.0            -2
+              1   -0.50          0.0             1
+CG-OS-S -O2   1    0.18          0.0             3.         Methyl sulphate - CH3OSO3
+H1-CG-OS-S    1    0.17          0.0             3.         Methyl sulphate -CH3CH2OSO3
+CG-CG-OS-S    1   -1.20          0.0             1.         Ethyl sulphate - CH3OSO3
+
+van der Waals
+   S           2.0000  0.2500             W. Cornell CH3SH and CH3SCH3 FEP's 03/16/05 from parm94.dat
+   P           2.1000  0.2000             JCC,7,(1986),230; 04/24/05 from parm94.dat

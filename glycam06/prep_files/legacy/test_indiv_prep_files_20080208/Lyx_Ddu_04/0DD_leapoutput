@@ -1,0 +1,46 @@
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/prep to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/lib to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/parm to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/cmd to search path.
+-f: Source 0DD_leapinput.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./0DD_leapinput
+----- Source: ../leaprc
+----- Source of ../leaprc done
+Loading parameters: /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+Reading title:
+GLYCAM PARAMETERS (FOR AMBER 8.0, RESP 0.010), COPYRIGHT CCRC 2004
+Loading Prep file: ../aglycon_04.prep.file
+Loading Prep file: ../Lyx_Ddu_04.prep
+Writing pdb file: 0DD.pdb
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Could not find bond parameter for: OH - H1
+Building angle parameters.
+Could not find angle parameter: CG - OH - H1
+Building proper torsion parameters.
+ ** No torsion terms for  H1-CG-OH-H1
+ ** No torsion terms for  H1-CG-OH-H1
+ ** No torsion terms for  CG-CG-OH-H1
+Building improper torsion parameters.
+old PREP-specified impropers:
+ <0DD 2>:  C2   H1   C1   O4  
+ total 0 improper torsions applied
+ 1 improper torsions in old prep form
+Building H-Bond parameters.
+Parameter file was not saved.
+Checking 'x'....
+Checking parameters for unit 'x'.
+Checking for bond parameters.
+Could not find bond parameter for: OH - H1
+Checking for angle parameters.
+Could not find angle parameter: CG - OH - H1
+There are missing parameters.
+Unit is OK.
+Total unperturbed charge:  -0.000000
+Total perturbed charge:    -0.000000
+	Quit

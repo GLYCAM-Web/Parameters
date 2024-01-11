@@ -1,0 +1,335 @@
+File:  readme/Glycam_06b.txt ===================================
+20080110 ABY
+
+The following terms were added to the Glycam_06a.dat file, found on glycam and
+also employed by the webtool, to generate Glycam_06b.dat.
+The Glycam_06b.dat file now contains parameters for modeling lipids.
+
+### Added Terms
+
+CP 12.01                             sp3 C aliphatic - carbon atom bonded to an oxygen atom bonded to a phosphorus atom
+CK 12.01                             sp2 C alkenes
+CJ 12.01                             sp2 C alkenes for adjacent double bonds
+HA 1.008                             H aliph. bond. to C in alkenes eg CK
+HP 1.008                             H bonded to C next to positively charged group
+NT 14.01                             sp3 N amine group
+N3 14.01                             sp3 N for charged amino groups (Lys, phospholipids, etc)
+
+N3-H   434.0    1.010       Parm94
+N3-CG  355.0    1.490       Methanaminium (eqm value from crystal avg)
+CJ-CK  350.9    1.467       CRC manual for 1,3-butadiene
+OS-CJ  454.5    1.359       copy of OS-CK
+OS-CK  454.5    1.359       Methoxyethene (JACS 1993, 115, 11921)
+CJ-CJ  629.0    1.337       copy of CK-CK
+CK-CK  629.0    1.337       JCC 1996, 17 (5&6),669
+CG-CJ  324.0    1.514       copy of CG-CK
+CG-CK  324.0    1.514       JCC 1996, 17 (5&6),669
+CJ-HA  360.0    1.095       copy of CK-HA
+CK-HA  360.0    1.095       Ethane for alkenes
+CG-HP  360.0    1.095       Copy of CG-HC
+NT-H   434.0    1.010       Parm99
+NT-CG  352.0    1.470       K calculated from methyl amine (eqm value from crystal average)
+CG-CP  310.0    1.520       Copy of CG-CG
+CP-H1  340.0    1.090       Copy of CG-H1
+CP-OS  285.0    1.460       Copy of CG-OS
+
+H -N3-CG     45.5     109.2    Methanaminium (eqm. value copied from H -NT-CG)
+H -N3-H      35.0     109.5    Parm94
+N3-CG-HP     57.0     109.6    Methanaminium (eqm. value copied from NT-CG-H1)
+CJ-CG-CK     46.7     111.5    copy of CK-CG-CK
+CK-CG-CK     46.7     111.5    K calculated from 1,4-pentadiene (value from ED of C2 and CS conformers JACS 1987,109,24,7304-7309 108.9 deg)
+CJ-CG-CJ     46.7     111.5    copy of CK-CG-CK
+OS-CJ-HA     65.1     107.5    copy of OS-CK-HA
+OS-CK-HA     65.1     107.5    K calculated from methoxyethene (value from J Mol Struct 102 (1983) pg 333-345 methoxyethene 108.3 deg)
+CG-OS-CJ     38.0     107.0    copy of CG-OS-CK
+CG-OS-CK     38.0     107.0    K calculated from methoxyethene (value from J Mol Struct 28 (1975) pg 193-203 methoxyethene 118.3 deg)
+OS-CJ-CJ     59.5     119.0    copy of OS-CK-CK
+OS-CK-CK     59.5     119.0    K calculated from methoxyethene (value from J Mol Struct 28 (1975) pg 193-203 methoxyethene 127.7 deg)
+CG-CJ-CG     46.1     115.6    copy of CG-CK-CG
+CG-CK-CG     46.1     115.6    K calculated from 2-methylpropene (eqm value from ED,MW average 115.6 deg)
+CK-CJ-HA     32.7     126.4    copy of CJ-CK-HA
+CJ-CK-HA     32.7     126.4    K calculated from 1,3-butadiene (value form ED of 1,3-butadiene 120.9 deg)
+CK-CJ-CJ     49.4     127.7    copy of CK-CK-CJ
+CK-CK-CJ     49.4     127.7    K calculated from 1,3-butadiene (eqm value from ED 124.4 deg)
+HA-CJ-HA     31.3     117.4    copy of HA-CK-HA
+HA-CK-HA     31.3     117.4    K calculated from ethylene (eqm value from ED,MW average)
+HA-CJ-CJ     38.2     121.3    copy of HA-CK-CK
+HA-CK-CK     38.2     121.3    K calculated from ethylene (eqm value from ED,MW average)
+H1-CG-CJ     56.0     111.5    copy of H1-CG-CK
+H1-CG-CK     56.0     111.5    Copy of HC-CG-CK
+HC-CG-CJ     41.4     114.0    copy of HC-CG-CK
+HC-CG-CK     41.4     114.0    K calculated from propene (eqm value from JMS 1973,17,207-223,ED 111.7 deg)
+HA-CJ-CG     50.0     114.0    copy of HA-CK-CG
+HA-CK-CG     50.0     114.0    K calculated from propene (eqm value from ED,MW average)
+CG-CJ-CJ     47.9     122.5    copy of CG-CK-CK
+CG-CK-CK     47.9     122.5    K calculated from propene (eqm value from JMS 1973,17,207-223,ED 124.3 deg)
+CG-CG-CJ     43.0     112.0    copy of CG-CG-CK
+CG-CG-CK     43.0     112.0    K calculated from but-1-ene (eqm value from JACS 1980,102(7),471)
+OH-CG-CJ     70.0     107.5    copy of OH-CG-CK
+OH-CG-CK     70.0     107.5    Copy of OH-CG-CG
+HP-CG-HP     40.0     109.5    Copy of HC-CG-HC
+HP-CG-CP     45.0     112.6    Copy of CG-CG-HC
+HP-CG-CG     45.0     112.6    Copy of CG-CG-HC
+CG-N3-CG     54.0     111.1
+N3-CG-CP     67.0     111.6    Copy of NT-CG-CG
+N3-CG-CG     67.0     111.6    Copy of NT-CG-CG
+H -NT-H      35.0     109.5    Copy of H-N3-H (Parm94)
+H -NT-CG     49.0     109.2    K calculated from methyl amine (eqm value from crystal average)
+NT-CG-H1     64.0     109.6    K calculated from methyl amine (eqm value from crystal average)
+NT-CG-CG     67.0     111.6    K calculated from ethyl amine (eqm value from crystal average)
+CG-NT-CG     54.0     108.1    K calculated from dimethyl amine (eqm value from crystal average)
+H1-CP-H1     45.00    109.50   Copy of H1-CG-H1
+CP-CG-H1     45.00    111.00   Copy of CG-CG-H1
+CG-CP-H1     45.00    111.00   Copy of CG-CG-H1
+CP-CG-CG     45.00    113.50   Copy of CG-CG-CG
+OS-CP-CG     70.00    108.50   Copy of OS-CG-CG
+OS-CG-CP     70.00    108.50   Copy of OS-CG-CG
+H1-CP-OS     60.00    110.00   Copy of H1-CG-OS
+
+H -N3-CG-HP   1    0.13          0.0             3          Methanaminium
+H -N3-CG-CG   1    0.13          0.0             3          Ethanaminium
+CK-CG-CG-N    1    0.18          0.0            -3          Lipids, from N-but-3-en-1-ylacetamide
+              1    0.03          0.0            -2
+              1   -0.22          0.0             1
+CJ-CG-CG-N    1    0.18          0.0            -3          Lipids, copy of CK-CG-CG-N
+              1    0.03          0.0            -2
+              1   -0.22          0.0             1
+C -CG-CG-CJ   1   -0.42          0.0            -3          Lipids, from 3-buten-1-ol acetate
+              1    0.33          0.0            -2
+              1    0.40          0.0             1
+C -CG-CG-CK   1   -0.42          0.0            -3          Lipids, from 3-buten-1-ol acetate
+              1    0.33          0.0            -2
+              1    0.40          0.0             1
+H1-CG-CG-CK   1    0.10          0.0             3          Lipids, copy of HC-CG-CG-CK
+H1-CG-CG-CJ   1    0.10          0.0             3          Lipids, copy of HC-CG-CG-CJ
+OH-CG-CG-CK   1   -0.11          0.0            -3          Lipids, from 3-butenol
+              1   -0.16          0.0            -2
+              1   -1.06          0.0             1
+OH-CG-CG-CJ   1   -0.11          0.0            -3          Lipids, from 3-butenol
+              1   -0.16          0.0            -2
+              1   -1.06          0.0             1
+OS-CJ-CJ-CG   1  -13.00          0.0             2          copy of OS-CK-CK-CG
+OS-CK-CK-CG   1  -13.00          0.0             2          Lipids, from 1-propenylmethylether
+CK-CJ-CJ-HA   1  -15.00          0.0             2          copy of CJ-CK-CK-HA
+CJ-CK-CK-HA   1  -15.00          0.0             2
+CG-OS-CJ-HA   1    0.08          0.0            -3          copy of CG-OS-CK-HA, coupled to CG-OS-CJ-CJ
+              1    0.22          0.0            -2
+              1    0.40          0.0             1
+CG-OS-CK-HA   1    0.08          0.0            -3          Lipids, from methoxyethene, coupled to CG-OS-CK-CK
+              1    0.22          0.0            -2
+              1    0.40          0.0             1
+OS-CJ-CJ-HA   1  -20.00          0.0             2          copy of OS-CK-CK-HA
+OS-CK-CK-HA   1  -20.00          0.0             2          Lipids, from methoxyethene
+H1-CG-OS-CJ   1    0.10          0.0             3          copy of H1-CG-OS-CK
+H1-CG-OS-CK   1    0.10          0.0             3          Lipids, from methoxyethene
+CG-CG-OS-CJ   1   -0.01          0.0            -3          copy of CG-CG-OS-CK
+              1   -0.42          0.0            -2
+              1    0.22          0.0             1
+CG-CG-OS-CK   1   -0.01          0.0            -3          Lipids, from ethoxyethene
+              1   -0.42          0.0            -2
+              1    0.22          0.0             1
+CG-OS-CJ-CJ   1   -0.87          0.0            -3          copy of CG-OS-CK-CK
+              1   -3.99          0.0            -2
+              1   -0.25          0.0             1
+CG-OS-CK-CK   1   -0.87          0.0            -3
+              1   -3.99          0.0            -2
+              1   -0.25          0.0             1
+CJ-CK-CK-CJ   1   -2.00          0.0             2
+CK-CJ-CJ-CK   1   -2.00          0.0             2
+CK-CG-CK-CK   1   -0.04          0.0            -3          Lipids, from 1,4-Pentadiene
+              1   -0.68          0.0            -2
+              1   -0.21          0.0             1
+CJ-CG-CK-CK   1   -0.04          0.0            -3          Copy of CK-CG-CK-CK
+              1   -0.68          0.0            -2
+              1   -0.21          0.0             1
+CK-CG-CJ-CJ   1   -0.04          0.0            -3          Copy of CK-CG-CK-CK
+              1   -0.68          0.0            -2
+              1   -0.21          0.0             1
+CJ-CG-CJ-CJ   1   -0.04          0.0            -3          Copy of CK-CG-CK-CK
+              1   -0.68          0.0            -2
+              1   -0.21          0.0             1
+CK-CG-CK-HA   1    0.31          0.0            -3          Lipids, from 1,4-Pentadiene, coupled to CK-CG-CK-CK
+              1    0.03          0.0            -2
+              1    0.05          0.0             1
+CJ-CG-CK-HA   1    0.31          0.0            -3          Copy of CK-CG-CK-HA, coupled to CJ-CG-CK-CK
+              1    0.03          0.0            -2
+              1    0.05          0.0             1
+CK-CG-CJ-HA   1    0.31          0.0            -3          Copy of CK-CG-CK-HA, coupled to CK-CG-CJ-CJ
+              1    0.03          0.0            -2
+              1    0.05          0.0             1
+CJ-CG-CJ-HA   1    0.31          0.0            -3          Copy of CK-CG-CK-HA, coupled to CJ-CG-CJ-CJ
+              1    0.03          0.0            -2
+              1    0.05          0.0             1
+CJ-CK-CK-CG   1   -3.50          0.0             2          copy of CK-CJ-CJ-CG
+CK-CJ-CJ-CG   1   -3.50          0.0             2          Lipids, from
+CG-CG-CJ-CG   1   -0.01          0.0            -3          copy of CG-CG-CK-CG
+              1   -0.34          0.0            -2
+              1    0.29          0.0             1
+CG-CG-CK-CG   1   -0.01          0.0            -3          Lipids
+              1   -0.34          0.0            -2
+              1    0.29          0.0             1
+HC-CG-CJ-CG   1    0.0           0.0             1          copy of HC-CG-CK-CG,no term necessary
+HC-CG-CK-CG   1    0.0           0.0             1          Lipids, no term necessary
+HA-CK-CJ-HA   1    0.69          0.0            -3          Lipids - 1,3-butadiene
+              1   -1.75          0.0            -2
+              1    0.92          0.0             1
+HA-CJ-CK-CK   1    0.17          0.0            -3          copy of HA-CK-CJ-CJ
+              1    0.40          0.0            -2
+              1    0.69          0.0             1
+HA-CK-CJ-CJ   1    0.17          0.0            -3          Lipids - 1,3-butadiene
+              1    0.40          0.0            -2
+              1    0.69          0.0             1
+CJ-CJ-CK-CK   1    0.69          0.0            -3          Lipids - adjacent double-bonded carbons
+              1   -1.75          0.0            -2
+              1    0.92          0.0             1
+OH-CG-CJ-CJ   1   -0.50          0.0            -3          copy of OH-CG-CK-CK
+              1   -1.00          0.0            -2
+              1   -0.50          0.0             1
+OH-CG-CK-CK   1   -0.50          0.0            -3          Lipids
+              1   -1.00          0.0            -2
+              1   -0.50          0.0             1
+OH-CG-CJ-HA   1    0.0           0.0             1          Coupled to OH-CG-CK-CK, copy of OH-CG-CK-HA
+OH-CG-CK-HA   1    0.0           0.0             1          Coupled to OH-CG-CK-CK
+HO-OH-CG-CJ   1    0.20          0.0            -3          copy of HO-OH-CG-CK
+              1    0.58          0.0            -2
+              1    0.38          0.0             1
+HO-OH-CG-CK   1    0.20          0.0            -3          Lipids
+              1    0.58          0.0            -2
+              1    0.38          0.0             1
+CG-CG-CG-CJ   1    0.0           0.0             3          copy of CG-CG-CG-CJ
+CG-CG-CG-CK   1    0.0           0.0             3          Lipids
+CG-CG-CJ-CJ   1   -0.5           0.0            -3          copy of CG-CG-CK-CK
+              1   -0.4           0.0             2
+CG-CG-CK-CK   1   -0.5           0.0            -3          Lipids
+              1   -0.4           0.0             2
+CG-CG-CJ-HA   1    0.0           0.0             1          Lipids coupled to CG-CG-CK-CK, copy of CG-CG-CK-HA
+CG-CG-CK-HA   1    0.0           0.0             1          Lipids coupled to CG-CG-CK-CK
+CG-CJ-CJ-CG   1  -15.0           0.0            -2          copy of CG-CK-CK-CG
+              1    0.5           0.0             1
+CG-CK-CK-CG   1  -15.0           0.0            -2          Lipids
+              1    0.5           0.0             1
+HC-CG-CG-CJ   1    0.1           0.0             3          copy of HC-CG-CG-CK
+HC-CG-CG-CK   1    0.1           0.0             3          Lipids
+H1-CG-CJ-CJ   1   -0.33          0.0             3          Copy of HC-CG-CK-CK
+H1-CG-CK-CK   1   -0.33          0.0             3          Copy of HC-CG-CK-CK
+HC-CG-CJ-CJ   1   -0.34          0.0            -3          Copy of HC-CG-CK-CK
+              1   -0.1           0.0            -2
+              1    0.1           0.0             1
+HC-CG-CK-CK   1   -0.34          0.0            -3          Lipids
+              1   -0.1           0.0            -2
+              1    0.1           0.0             1
+HC-CG-CJ-HA   1    0.0           0.0             3          Lipids coupled to HC-CG-CJ-CJ
+HC-CG-CK-HA   1    0.0           0.0             3          Lipids coupled to HC-CG-CK-CK
+H1-CG-CJ-HA   1    0.0           0.0             3          Copy of HC-CG-CK-HA
+H1-CG-CK-HA   1    0.0           0.0             3          Copy of HC-CG-CK-HA
+HA-CJ-CJ-CG   1  -21.0           0.0             2          copy of HA-CK-CK-CG
+HA-CK-CK-CG   1  -21.0           0.0             2          Lipids
+HA-CJ-CJ-HA   1   -8.5           0.0             2          copy of HA-CK-CK-HA
+HA-CK-CK-HA   1   -8.5           0.0             2          Lipids
+HP-CG-CP-OS   1    0.05          0.0             3.         Copy of HC-CG-CG-OS
+HP-CG-CG-OS   1    0.05          0.0             3.         Copy of HC-CG-CG-OS
+HP-CG-CP-H1   1    0.13          0.0             3.         Copy of HC-CG-CG-HC
+HP-CG-CG-H1   1    0.13          0.0             3.         Copy of HC-CG-CG-HC
+HP-CG-CG-HC   1    0.13          0.0             3.         Copy of HC-CG-CG-HC
+HP-CG-CG-CG   1    0.10          0.0             3.         Copy of HC-CG-CG-CG
+CG-N3-CG-CP   1    0.1           0.0            -3          Copy of CG-N3-CG-CG
+              1   -0.2           0.0            -2
+              1    0.1           0.0             1
+CG-N3-CG-CG   1    0.1           0.0            -3          N-methylethanaminium
+              1   -0.2           0.0            -2
+              1    0.1           0.0             1
+CG-NT-CG-CG   1    0.1           0.0            -3          N-Ethyl N-Methyl amine
+              1   -0.2           0.0            -2
+              1    0.1           0.0             1
+N3-CG-CG-CG   1    0.3           0.0            -3          Propanaminium
+              1   -0.1           0.0            -2
+              1    0.1           0.0             1
+NT-CG-CG-CG   1    0.3           0.0            -3          N-Propyl amine
+              1   -0.1           0.0            -2
+              1    0.1           0.0             1
+NT-CG-CG-HC   1    0.1           0.0             3          N-ethyl amine
+N3-CG-CG-HC   1    0.1           0.0             3          Ethanaminium
+NT-CG-CG-H1   1    0.1           0.0             3          N-ethyl amine
+N3-CG-CP-H1   1    0.1           0.0             3          Copy of NT-CG-CG-H1
+N3-CG-CG-H1   1    0.1           0.0             3          Copy of NT-CG-CG-H1
+NT-CG-CG-OS   1    1.5           0.0            -3          2-Methoxy ethyl amine
+              1    0.5           0.0            -2
+              1   -0.5           0.0             1
+N3-CG-CP-OS   1    1.5           0.0            -3          2-Methoxyethanaminium
+              1    0.5           0.0            -2
+              1   -0.5           0.0             1
+N3-CG-CG-OS   1    1.5           0.0            -3          2-Methoxyethanaminium
+              1    0.5           0.0            -2
+              1   -0.5           0.0             1
+NT-CG-CG-OH   1    0.6           0.0            -3          2-Hydroxy ethyl amine
+              1    0.5           0.0            -2
+              1   -1.0           0.0             1
+N3-CG-CG-OH   1    0.6           0.0            -3          2-Hydroxyethanaminium
+              1    0.5           0.0            -2
+              1   -1.0           0.0             1
+HP-CG-N3-CG   1    0.25          0.0             3          Dimethylammonium
+H1-CG-NT-CG   1    0.25          0.0             3          N,N-Dimethyl amine
+HC-CG-NT-CG   1    0.25          0.0             3          N,N-Dimethyl amine
+OS-C -CG-CG   1    0.20          0.0             3          Methyl propanoate
+CG-CG-NT-H    1    0.2           0.0             3          N-Ethyl amine
+H1-CG-NT-H    1    0.17          0.0             3          N-Methyl amine
+NT-CG-CG-HC   1    0.1           0.0             3          ***N-ethyl amine***Awaiting Correction
+NT-CG-CG-H1   1    0.1           0.0             3          ***N-ethyl amine***Awaiting Correction
+CP-CG-OS-C    1   -0.04          0.0            -3          Copy of CG-CG-OS-C
+              1    0.47          0.0             1
+H1-CG-CP-H1   1    0.17          0.0             3.         Copy of H1-CG-CG-H1
+H1-CG-CG-CP   1    0.15          0.0             3.         Copy of H1-CG-CG-CG
+H1-CP-CG-CG   1    0.15          0.0             3.         Copy of H1-CG-CG-CG
+OS-CP-CG-CG   1   -0.27          0.0             1.         Copy of OS-CG-CG-CG
+OS-CG-CG-CP   1   -0.27          0.0             1.         Copy of OS-CG-CG-CG
+CG-OS-CG-CP   1    0.16          0.0             3.         Copy of CG-OS-CG-CG
+OH-CG-CG-HP   1    0.05          0.0             3.         Tertbutanol
+OS-CG-CP-OS   1    0.82          0.0             2.         Copy of OS-CG-CG-OS
+H1-CG-CP-OS   1    0.05          0.0             3.         Copy of H1-CG-CG-OS
+H1-CP-CG-OS   1    0.05          0.0             3.         Copy of H1-CG-CG-OS
+H1-CG-CP-OS   1    0.05          0.0             3.         Copy of H1-CG-CG-OS
+
+
+  HA          1.4590  0.0150             Spellmeyer
+  HP          1.1000  0.0157             Veenstra et al JCC,8,(1992),963
+  CP          1.9080  0.1094             Spellmeyer
+  CK          1.9080  0.0860             Spellmeyer
+  CJ          1.9080  0.0860             Spellmeyer
+  NT          1.8240  0.1700             OPLS
+  N3          1.8240  0.1700             OPLS
+
+### Term Discrepencies
+
+N -C -CG-OH   1    0.1           0.0            -3          2-Hydroxy ethanamide
+              1   -2.2           0.0            -2
+              1    2.0           0.0             1
+
+
+### Other Issues
+
+# Missing from glycam web file, but not mine
+
+N -C -CG-CG   1    0.20          0.0            -3          Propanamide
+              1   -0.70          0.0            -2
+              1    0.05          0.0             1
+O -C -CG-CG   1    0.50          0.0            -3          Propanamide (coupled to N -C -CG-CG)
+              1   -0.10          0.0            -2
+              1   -0.05          0.0             1
+
+
+
+# Terms are in glycam web file, but incorrectly assigned (C next to P is CP)
+H1-CP-OS-P    1    0.07          0.0             3.         Dimethyl phosphate
+OS-P -OS-CP   1    0.50          0.0            -3.         Dimethyl phosphate
+              1    0.70          0.0             2.
+O2-P -OS-CP   1    0.10          0.0            -3.         Dimethyl phosphate
+              1   -0.50          0.0            -2.
+              1    0.10          0.0             1
+P -OS-CP-CG   1    0.10          0.0            -3          Methyl ethyl phosphate
+              1    0.05          0.0            -2
+              1   -1.20          0.0             1
+H2-CP-OS-P    1    0.07          0.0             3.         Dimethyl phosphate
+OS-CP-OS-P    1    0.40          0.0            -3          Methoxy methyl methyl phosphate
+              1    0.40          0.0            -2
+              1   -0.50          0.0             1
+

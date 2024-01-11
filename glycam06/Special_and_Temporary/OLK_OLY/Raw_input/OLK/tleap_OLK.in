@@ -1,0 +1,42 @@
+source leaprc.GLYCAM_06j-1
+source leaprc.ff12SB
+loadamberparams ./frcmod.ff12SB.extra
+
+loadamberprep ./OLK.prep
+
+remove OLK OLK.1.C1
+remove OLK OLK.1.H1
+remove OLK OLK.1.H2
+remove OLK OLK.1.H3
+remove OLK OLK.1.C2
+remove OLK OLK.1.O1
+remove OLK OLK.1.N3
+remove OLK OLK.1.H19
+remove OLK OLK.1.C10
+remove OLK OLK.1.H20
+remove OLK OLK.1.H21
+remove OLK OLK.1.H22
+remove OLK OLK.1.C8
+remove OLK OLK.1.H16
+remove OLK OLK.1.H17
+remove OLK OLK.1.H18
+
+mol = loadpdb ./OLK.pdb
+
+set mol tail mol.1.N
+set ACE head ACE.1.C
+mol=sequence {mol ACE}
+
+set mol tail mol.1.C
+set NME head NME.1.N
+mol=sequence {mol NME}
+
+set mol tail mol.1.O2
+set 0GA head 0GA.1.C1
+mol=sequence {mol 0GA}
+
+charge mol
+saveamberparm mol test_OLK.prmtop test_OLK.rst7
+savepdb mol test_OLK.pdb
+quit
+

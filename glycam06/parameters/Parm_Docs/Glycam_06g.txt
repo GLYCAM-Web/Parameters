@@ -1,0 +1,94 @@
+#### Change log for 2011-09-15 ####
+
+Changed by BLFoley to create Glycam_06g-1.dat
+
+Corrected typo in torsion:
+-NH-CG-CG-SM   1    0.45          0.0            -3.         SCEE=1.0 SCNB=1.0 Thiol-linkages
++N -CG-CG-SM   1    0.45          0.0            -3.         SCEE=1.0 SCNB=1.0 Thiol-linkages
+
+
+#### Change log for 2011-07-06 ####
+####	BLFoley ####
+Adding an approximate date for the public release of Glycam_06g.dat.
+(actual date lost)
+
+Estimated date:   8 July, 2010
+
+#  Glycam_06g.dat
+# Changes include adding a comprehensive thiol-linkage set for glycosidic linkages formed by a Sulfur
+# as well as N-Sulfate terms, updated ring-torsions, and sialic acid torsions
+# New 1,4-scaling setup has been added to the torsions section
+###
+## Changed the following terms from:
+# Angles
+OS-P -OS     45.0     102.6    Parm94
+P -OS-CP     50.0     121.0    K calculated from dimethyl phosphate (eqm value from crystal average)
+# Torsions
+OS-CG-CG-OS   1    0.82          0.0             2.         DiEthers
+OS-CG-CP-OS   1    0.82          0.0             2.         Copy of OS-CG-CG-OS
+CG-CG-OS-C    1   -0.04          0.0            -3          Ethyl acetate, 2-Methoxy 3-O-Acetyl THP
+              1    0.47          0.0             1
+CG-OS-C -O    1   -3.20          0.0             2          Methyl acetate
+CG-C -OS-CG   1   -3.0           0.0             2          Methyl acetate - CORRECTED
+CG-OS-CY-C    1    3.50          0.0             1.         1-Methoxy-1-Acetate THP, 1-Methoxy-1-Acetate THP Acid w/ Hbond - for sialic acid only!
+
+## to:
+# Angles
+OS-P -OS     45.0     109.6    Parm94 and changed eqm value for better reproduction of average of crystal structures
+P -OS-CP     50.0     119.0    K calculated from dimethyl phosphate (eqm value from crystal average)
+C -N -H      60.00    122.00   Ethanamide
+# Torsions
+OS-CG-CP-OS   1    0.40          0.0             2.         !G06g - Copy of OS-CG-CG-OS, original 0.82
+OS-CG-CG-OS   1    0.40          0.0             2.         !G06g - DiEthers, original 0.82
+CG-CG-OS-C    1   -0.01          0.0            -3          Ethyl acetate, 2-Methoxy 3-O-Acetyl THP
+              1    0.04          0.0            -2
+              1    0.12          0.0             1
+CG-OS-C -O    1    0.0           0.0            -3          Cyclohexyl acetate (axial and equatorial)
+              1   -2.90          0.0            -2
+              1    0.60          0.0             1
+CG-C -OS-CG   1    0.0           0.0            -3          Cyclohexyl acetate (axial and equatorial)
+              1   -2.90          0.0            -2
+              1   -0.60          0.0             1
+CG-OS-CY-C    1    1.90          0.0             1.         1-Methoxy-1-Acetate THP, 1-Methoxy-1-Acetate THP Acid w/ Hbond - for sialic acid only!
+
+# but did not change:
+OS-CG-CG-OY   1    0.82          0.0             2.         DiEthers - sialic acid only
+
+
+####
+# Added the following terms:
+# Bonds
+S -N   238.0    1.675       N-Sulfate - Using avg value from ZULPIF and ZULPIF01 (CSD 1.638 A)
+
+# Angles
+H2-CG-SM     41.5     109.6    Avg value from set of CSD crystal structures 109.2 deg
+OS-CG-SM     68.0     108.3    Avg value from set of CSD crystal structures 108.3 deg
+S -N -CG     31.0     110.0    avg value from ZULPIF & ZULPIF01 118.4 deg
+O2-S -N      84.0     108.0    avg value from ZULPIF & ZULPIF01 106.4 deg
+S -N -H      37.5     121.2    avg value from QM 6-31++g** 114.0 deg (ethylsulfamate)
+CP-OS-CG     50.00    111.60   Copy of CG-OS-CG
+CP-CG-N      80.00    109.70   Copy of CG-CG-N
+
+# Torsions
+O2-S -N -H    1   -0.10          0.0             6.         N-Sulfates
+O2-S -N -CG   1    0.11          0.0            -3.         N-Sulfates
+              1    0.00          0.0            -2.
+              1    0.00          0.0             1.
+S -N -CG-H1   1    0.02          0.0             3.         N-Sulfates
+S -N -CG-CG   1    0.00          0.0            -3.         N-Sulfates
+              1   -1.25          0.0            -2.
+              1   -4.00          0.0             1.
+CG-OS-CG-SM   1    0.67          0.0            -3.         Thiol-linkages
+              1    1.90          0.0            -2.
+              1    1.14          0.0             1.
+OS-CG-SM-CG   1    1.03          0.0            -3.         (methoxymethyl)(methyl)sulfane
+              1    1.44          0.0            -2.
+              1    0.27          0.0             1.
+H2-CG-SM-CG   1    0.0           0.0             1.         (methoxymethyl)(methyl)sulfane
+SM-CG-CG-H2   1    0.28          0.0            -3.         (2,2-dimethoxyethyl)(methyl)sulfane
+              1    0.04          0.0            -2.
+              1   -0.21          0.0             1.
+SM-CG-CG-OS   1    0.03          0.0            -3.         (2-methoxyethyl)(methyl)sulfane
+              1    0.18          0.0            -2.
+              1   -1.03          0.0             1.
+

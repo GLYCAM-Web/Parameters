@@ -1,0 +1,15 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../Glc_Dab_04.prep
+
+x = sequence {OME XGB}
+set x tail x.XGB.O2
+x = sequence {x 0GA}
+set x tail x.XGB.O6
+x = sequence {x 0GA}
+savepdb x XGB.pdb
+saveamberparm x XGB.top XGB.crd
+check x
+charge x
+Quit

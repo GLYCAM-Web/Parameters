@@ -1,0 +1,15 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../Tal_Dab_04.prep
+
+x = sequence {OME VTA}
+set x tail x.VTA.O3
+x = sequence {x 0TA}
+set x tail x.VTA.O6
+x = sequence {x 0TA}
+savepdb x VTA.pdb
+saveamberparm x VTA.top VTA.crd
+check x
+charge x
+Quit

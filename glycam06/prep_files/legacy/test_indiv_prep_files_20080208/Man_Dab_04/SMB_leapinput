@@ -1,0 +1,17 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../Man_Dab_04.prep
+
+x = sequence {OME SMB}
+set x tail x.SMB.O2
+x = sequence {x 0MA}
+set x tail x.SMB.O3
+x = sequence {x 0MA}
+set x tail x.SMB.O6
+x = sequence {x 0MA}
+savepdb x SMB.pdb
+saveamberparm x SMB.top SMB.crd
+check x
+charge x
+Quit

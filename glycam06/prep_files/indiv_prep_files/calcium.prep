@@ -1,0 +1,14 @@
+    1    1    2
+Calcium.dat
+Ca2+
+ca.dat
+CA2    INT 0
+CORRECT OMIT DU BEG
+0.0
+ 1 DUMM DU  M  0 -1 -2  0.000     0.0       0.0     0.0
+ 2 DUMM DU  M  1  0 -1  1.000     0.0       0.0     0.0
+ 3 DUMM DU  M  2  1  0  1.000    90.0       0.0     0.0
+ 4 CA2  C0  M  3  2  1  1.000    90.0     180.0     2.000
+                                                                                                             
+DONE
+STOP

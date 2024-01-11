@@ -1,0 +1,577 @@
+#!/usr/bin/perl -wl
+
+use strict;
+use Shell qw(cp);
+
+#Declare variables.
+my @FILES;
+my $file;
+my $trk_sub; #check number of branches on a sugar
+my $trk_ano; #check anomeric configuration
+my $inputfile = "header.in";
+my $run_tleap;
+my @RES; my $i; my $j;
+my @PREP;
+my $head; my $tail;
+my $chk; #controls printing of text to Error_files (see script below)
+
+my $tleap = "/usr/local/programs/amber8/exe/tleap";
+@FILES = <*prep>;
+
+#Get all prep files
+chdir "./ALL_PREPS";
+@FILES = <*prep>;
+chdir "../";
+
+foreach $file (@FILES)
+{
+
+#open input file (leap.in)
+open(INFIL,">$inputfile");
+
+	$i = 0;
+	$j = 0;
+
+        open(FL,"$file");
+        while(<FL>)
+        {
+                if($_ =~ /INT/)
+                {
+                        $PREP[$j] = substr($_, 0,3);
+                        $j++;
+                }
+        }
+
+
+	($head,$tail)=split(/\./, $file);
+	mkdir "$head";
+
+	#make leap input header
+	print INFIL "source /home/ayongye/GLYCAM06/1004leaprc.Glycam_04";
+	print INFIL "loadamberparams /home/ayongye/GLYCAM06/Glycam_06a.dat";
+	print INFIL "loadamberprep /home/ayongye/GLYCAM06/aglycon_04.prep";
+	print INFIL "loadamberprep ../"."$file\n";
+
+	#open prepfile
+	open(FIL, "$file");
+	while(<FIL>)
+	{
+		chomp;
+		if($_ =~ /INT/)
+		{
+			$RES[$i] = substr($_, 0,3);
+			$trk_sub = substr($_,0,1);
+			$trk_ano = substr($_,2,1);
+
+			#check number of branches
+                        if($trk_sub =~ /0/)
+                        {
+                                if($trk_ano =~/A/)
+                                {
+                                        my $inf = "inputfile";
+                                        open(INF,">$inf");
+                                        print INF "x = sequence {OME "."$RES[$i]"."}";
+                                        print INF "savepdb x "."$RES[$i]".".pdb";
+                                        print INF "saveamberparm x "."$RES[$i]".".top "."$RES[$i]".".crd";
+					print INF "check x";
+					print INF "charge x";
+                                        print INF "Quit";
+                                        cp("$inputfile","./$head/$RES[$i]"."_leapinput");
+                                        my $cat = "cat inputfile >> ./$head/$RES[$i]"."_leapinput";
+                                        system("$cat");
+                                        chdir "$head";
+                                        $run_tleap = $tleap." -f "."$RES[$i]"."_leapinput ".">$RES[$i]"."_leapoutput" ;
+                                        system("$run_tleap");
+                                        chdir "../";
+                                }
+
+                                elsif($trk_ano =~/B/)
+                                {
+                                        my $inf = "inputfile";
+                                        open(INF,">$inf");
+                                        print INF "x = sequence {OME "."$RES[$i]"."}";
+                                        print INF "savepdb x "."$RES[$i]".".pdb";
+                                        print INF "saveamberparm x "."$RES[$i]".".top "."$RES[$i]".".crd";
+                                        print INF "check x";
+                                        print INF "charge x";
+                                        print INF "Quit";
+                                        cp("$inputfile","./$head/$RES[$i]"."_leapinput");
+                                        my $cat = "cat inputfile >> ./$head/$RES[$i]"."_leapinput";
+                                        system("$cat");
+                                        chdir "$head";
+                                        $run_tleap = $tleap." -f "."$RES[$i]"."_leapinput ".">$RES[$i]"."_leapoutput" ;
+                                        system("$run_tleap");
+                                        chdir "../";
+                                }
+                        }
+
+                        if($trk_sub =~ /1/)
+                        {
+                                if($trk_ano =~/A/)
+                                {
+                                        my $inf = "inputfile";
+                                        open(INF,">$inf");
+                                        print INF "x = sequence {$RES[$i] $PREP[1]}";
+                                        print INF "savepdb x "."$RES[$i]".".pdb";
+                                        print INF "saveamberparm x "."$RES[$i]".".top "."$RES[$i]".".crd";
+                                        print INF "check x";
+                                        print INF "charge x";
+                                        print INF "Quit";
+                                        cp("$inputfile","./$head/$RES[$i]"."_leapinput");
+                                        my $cat = "cat inputfile >> ./$head/$RES[$i]"."_leapinput";
+                                        system("$cat");
+                                        chdir "$head";
+                                        $run_tleap = $tleap." -f "."$RES[$i]"."_leapinput ".">$RES[$i]"."_leapoutput" ;
+                                        system("$run_tleap");
+                                        chdir "../";
+                                }
+
+                                elsif($trk_ano =~/B/)
+                                {
+                                        my $inf = "inputfile";
+                                        open(INF,">$inf");
+                                        print INF "x = sequence {$RES[$i] $PREP[10]}";
+                                        print INF "savepdb x "."$RES[$i]".".pdb";
+                                        print INF "saveamberparm x "."$RES[$i]".".top "."$RES[$i]".".crd";
+                                        print INF "check x";
+                                        print INF "charge x";
+                                        print INF "Quit";
+                                        cp("$inputfile","./$head/$RES[$i]"."_leapinput");
+                                        my $cat = "cat inputfile >> ./$head/$RES[$i]"."_leapinput";
+                                        system("$cat");
+                                        chdir "$head";
+                                        $run_tleap = $tleap." -f "."$RES[$i]"."_leapinput ".">$RES[$i]"."_leapoutput" ;
+                                        system("$run_tleap");
+                                        chdir "../";
+                                }
+                        }
+
+                        if($trk_sub =~ /2/)
+                        {
+                                if($trk_ano =~/A/)
+                                {
+                                        my $inf = "inputfile";
+                                        open(INF,">$inf");
+                                        print INF "x = sequence {OME $RES[$i] $PREP[1]}";
+                                        print INF "savepdb x "."$RES[$i]".".pdb";
+                                        print INF "saveamberparm x "."$RES[$i]".".top "."$RES[$i]".".crd";
+                                        print INF "check x";
+                                        print INF "charge x";
+                                        print INF "Quit";
+                                        cp("$inputfile","./$head/$RES[$i]"."_leapinput");
+                                        my $cat = "cat inputfile >> ./$head/$RES[$i]"."_leapinput";
+                                        system("$cat");
+                                        chdir "$head";
+                                        $run_tleap = $tleap." -f "."$RES[$i]"."_leapinput ".">$RES[$i]"."_leapoutput" ;
+                                        system("$run_tleap");
+                                        chdir "../";
+                                }
+
+                                elsif($trk_ano =~/B/)
+                                {
+                                        my $inf = "inputfile";
+                                        open(INF,">$inf");
+                                        print INF "x = sequence {OME $RES[$i] $PREP[10]}";
+                                        print INF "savepdb x "."$RES[$i]".".pdb";
+                                        print INF "saveamberparm x "."$RES[$i]".".top "."$RES[$i]".".crd";
+                                        print INF "check x";
+                                        print INF "charge x";
+                                        print INF "Quit";
+                                        cp("$inputfile","./$head/$RES[$i]"."_leapinput");
+                                        my $cat = "cat inputfile >> ./$head/$RES[$i]"."_leapinput";
+                                        system("$cat");
+                                        chdir "$head";
+                                        $run_tleap = $tleap." -f "."$RES[$i]"."_leapinput ".">$RES[$i]"."_leapoutput" ;
+                                        system("$run_tleap");
+                                        chdir "../";
+                                }
+                        }
+
+                        if($trk_sub =~ /3/)
+                        {
+                                if($trk_ano =~/A/)
+                                {
+                                        my $inf = "inputfile";
+                                        open(INF,">$inf");
+                                        print INF "x = sequence {OME $RES[$i] $PREP[1]}";
+                                        print INF "savepdb x "."$RES[$i]".".pdb";
+                                        print INF "saveamberparm x "."$RES[$i]".".top "."$RES[$i]".".crd";
+                                        print INF "check x";
+                                        print INF "charge x";
+                                        print INF "Quit";
+                                        cp("$inputfile","./$head/$RES[$i]"."_leapinput");
+                                        my $cat = "cat inputfile >> ./$head/$RES[$i]"."_leapinput";
+                                        system("$cat");
+                                        chdir "$head";
+                                        $run_tleap = $tleap." -f "."$RES[$i]"."_leapinput ".">$RES[$i]"."_leapoutput" ;
+                                        system("$run_tleap");
+                                        chdir "../";
+                                }
+
+                                elsif($trk_ano =~/B/)
+                                {
+                                        my $inf = "inputfile";
+                                        open(INF,">$inf");
+                                        print INF "x = sequence {OME $RES[$i] $PREP[10]}";
+                                        print INF "savepdb x "."$RES[$i]".".pdb";
+                                        print INF "saveamberparm x "."$RES[$i]".".top "."$RES[$i]".".crd";
+                                        print INF "check x";
+                                        print INF "charge x";
+                                        print INF "Quit";
+                                        cp("$inputfile","./$head/$RES[$i]"."_leapinput");
+                                        my $cat = "cat inputfile >> ./$head/$RES[$i]"."_leapinput";
+                                        system("$cat");
+                                        chdir "$head";
+                                        $run_tleap = $tleap." -f "."$RES[$i]"."_leapinput ".">$RES[$i]"."_leapoutput" ;
+                                        system("$run_tleap");
+                                        chdir "../";
+                                }
+                        }
+
+                        if($trk_sub =~ /4/)
+                        {
+                                if($trk_ano =~/A/)
+                                {
+                                        my $inf = "inputfile";
+                                        open(INF,">$inf");
+                                        print INF "x = sequence {OME $RES[$i] $PREP[1]}";
+                                        print INF "savepdb x "."$RES[$i]".".pdb";
+                                        print INF "saveamberparm x "."$RES[$i]".".top "."$RES[$i]".".crd";
+                                        print INF "check x";
+                                        print INF "charge x";
+                                        print INF "Quit";
+                                        cp("$inputfile","./$head/$RES[$i]"."_leapinput");
+                                        my $cat = "cat inputfile >> ./$head/$RES[$i]"."_leapinput";
+                                        system("$cat");
+                                        chdir "$head";
+                                        $run_tleap = $tleap." -f "."$RES[$i]"."_leapinput ".">$RES[$i]"."_leapoutput" ;
+                                        system("$run_tleap");
+                                        chdir "../";
+                                }
+
+                                elsif($trk_ano =~/B/)
+                                {
+                                        my $inf = "inputfile";
+                                        open(INF,">$inf");
+                                        print INF "x = sequence {OME $RES[$i] $PREP[10]}";
+                                        print INF "savepdb x "."$RES[$i]".".pdb";
+                                        print INF "saveamberparm x "."$RES[$i]".".top "."$RES[$i]".".crd";
+                                        print INF "check x";
+                                        print INF "charge x";
+                                        print INF "Quit";
+                                        cp("$inputfile","./$head/$RES[$i]"."_leapinput");
+                                        my $cat = "cat inputfile >> ./$head/$RES[$i]"."_leapinput";
+                                        system("$cat");
+                                        chdir "$head";
+                                        $run_tleap = $tleap." -f "."$RES[$i]"."_leapinput ".">$RES[$i]"."_leapoutput" ;
+                                        system("$run_tleap");
+                                        chdir "../";
+                                }
+                        }
+
+                        if($trk_sub =~ /6/)
+                        {
+                                if($trk_ano =~/A/)
+                                {
+                                        my $inf = "inputfile";
+                                        open(INF,">$inf");
+                                        print INF "x = sequence {OME $RES[$i] $PREP[1]}";
+                                        print INF "savepdb x "."$RES[$i]".".pdb";
+                                        print INF "saveamberparm x "."$RES[$i]".".top "."$RES[$i]".".crd";
+                                        print INF "check x";
+                                        print INF "charge x";
+                                        print INF "Quit";
+                                        cp("$inputfile","./$head/$RES[$i]"."_leapinput");
+                                        my $cat = "cat inputfile >> ./$head/$RES[$i]"."_leapinput";
+                                        system("$cat");
+                                        chdir "$head";
+                                        $run_tleap = $tleap." -f "."$RES[$i]"."_leapinput ".">$RES[$i]"."_leapoutput" ;
+                                        system("$run_tleap");
+                                        chdir "../";
+                                }
+
+                                elsif($trk_ano =~/B/)
+                                {
+                                        my $inf = "inputfile";
+                                        open(INF,">$inf");
+                                        print INF "x = sequence {OME $RES[$i] $PREP[10]}";
+                                        print INF "savepdb x "."$RES[$i]".".pdb";
+                                        print INF "saveamberparm x "."$RES[$i]".".top "."$RES[$i]".".crd";
+                                        print INF "check x";
+                                        print INF "charge x";
+                                        print INF "Quit";
+                                        cp("$inputfile","./$head/$RES[$i]"."_leapinput");
+                                        my $cat = "cat inputfile >> ./$head/$RES[$i]"."_leapinput";
+                                        system("$cat");
+                                        chdir "$head";
+                                        $run_tleap = $tleap." -f "."$RES[$i]"."_leapinput ".">$RES[$i]"."_leapoutput" ;
+                                        system("$run_tleap");
+                                        chdir "../";
+                                }
+                        }
+
+                        if($trk_sub =~ /W/)
+                        {
+				if($trk_ano =~ /A/)
+				{
+                                        my $inf = "inputfile";
+                                        open(INF,">$inf");
+                                	print INF "x = sequence {OME $RES[$i]}";
+					print INF "set x tail x."."$RES[$i]".".O3";
+					print INF "x = sequence {x $PREP[1]}";
+					print INF "set x tail x."."$RES[$i]".".O4";
+					print INF "x = sequence {x $PREP[1]}";
+                                        print INF "impose x {4 2}{{C1 O4 C4 H4 0.0}}";
+                                        print INF "impose x {3 2}{{C1 O3 C3 H3 0.0}}";
+                                	print INF "savepdb x "."$RES[$i]".".pdb";
+                                	print INF "saveamberparm x "."$RES[$i]".".top "."$RES[$i]".".crd";
+                                        print INF "check x";
+                                        print INF "charge x";
+                                        print INF "Quit";
+                                        cp("$inputfile","./$head/$RES[$i]"."_leapinput");
+                                        my $cat = "cat inputfile >> ./$head/$RES[$i]"."_leapinput";
+                                        system("$cat");
+                                        chdir "$head";
+                                        $run_tleap = $tleap." -f "."$RES[$i]"."_leapinput ".">$RES[$i]"."_leapoutput" ;
+                                        system("$run_tleap");
+                                        chdir "../";
+				}
+
+				elsif($trk_ano =~ /B/)
+				{
+                                        my $inf = "inputfile";
+                                        open(INF,">$inf");
+                                        print INF "x = sequence {OME $RES[$i]}";
+                                        print INF "set x tail x."."$RES[$i]".".O3";
+                                        print INF "x = sequence {x $PREP[10]}";
+					print INF "set x tail x."."$RES[$i]".".O4";
+					print INF "x = sequence {x $PREP[10]}";
+					print INF "impose x {3 2}{{C1 O4 C4 H4 0.0}}";
+					print INF "impose x {4 2}{{C1 O3 C3 H3 0.0}}";
+                                        print INF "savepdb x "."$RES[$i]".".pdb";
+                                        print INF "saveamberparm x "."$RES[$i]".".top "."$RES[$i]".".crd";
+                                        print INF "check x";
+                                        print INF "charge x";
+                                        print INF "Quit";
+                                        cp("$inputfile","./$head/$RES[$i]"."_leapinput");
+                                        my $cat = "cat inputfile >> ./$head/$RES[$i]"."_leapinput";
+                                        system("$cat");
+                                        chdir "$head";
+                                        $run_tleap = $tleap." -f "."$RES[$i]"."_leapinput ".">$RES[$i]"."_leapoutput" ;
+                                        system("$run_tleap");
+                                        chdir "../";
+                                }
+                        }
+
+			if($trk_sub =~ /V/)
+			{
+				if($trk_ano =~ /A/)
+				{
+                                        my $inf = "inputfile";
+                                        open(INF,">$inf");
+                                        print INF "x = sequence {OME $RES[$i]}";
+                                        print INF "set x tail x."."$RES[$i]".".O3";
+                                        print INF "x = sequence {x $PREP[1]}";
+					print INF "set x tail x."."$RES[$i]".".O6";
+					print INF "x = sequence {x $PREP[1]}";
+                                        print INF "savepdb x "."$RES[$i]".".pdb";
+                                        print INF "saveamberparm x "."$RES[$i]".".top "."$RES[$i]".".crd";
+                                        print INF "check x";
+                                        print INF "charge x";
+                                        print INF "Quit";
+                                        cp("$inputfile","./$head/$RES[$i]"."_leapinput");
+                                        my $cat = "cat inputfile >> ./$head/$RES[$i]"."_leapinput";
+                                        system("$cat");
+                                        chdir "$head";
+                                        $run_tleap = $tleap." -f "."$RES[$i]"."_leapinput ".">$RES[$i]"."_leapoutput" ;
+                                        system("$run_tleap");
+                                        chdir "../";
+				}
+
+				elsif($trk_ano =~ /B/)
+				{
+                                        my $inf = "inputfile";
+                                        open(INF,">$inf");
+                                        print INF "x = sequence {OME $RES[$i]}";
+                                        print INF "set x tail x."."$RES[$i]".".O3";
+                                        print INF "x = sequence {x $PREP[10]}";
+					print INF "set x tail x."."$RES[$i]".".O6";
+					print INF "x = sequence {x $PREP[10]}";
+                                        print INF "impose x {3 2}{{C1 O3 C3 H3 0.0}}";
+                                        print INF "savepdb x "."$RES[$i]".".pdb";
+                                        print INF "saveamberparm x "."$RES[$i]".".top "."$RES[$i]".".crd";
+                                        print INF "check x";
+                                        print INF "charge x";
+                                        print INF "Quit";
+                                        cp("$inputfile","./$head/$RES[$i]"."_leapinput");
+                                        my $cat = "cat inputfile >> ./$head/$RES[$i]"."_leapinput";
+                                        system("$cat");
+                                        chdir "$head";
+                                        $run_tleap = $tleap." -f "."$RES[$i]"."_leapinput ".">$RES[$i]"."_leapoutput" ;
+                                        system("$run_tleap");
+                                        chdir "../";
+				}
+			}
+
+                        if($trk_sub =~ /U/)
+                        {
+                                if($trk_ano =~ /A/)
+                                {
+                                        my $inf = "inputfile";
+                                        open(INF,">$inf");
+                                        print INF "x = sequence {OME $RES[$i]";
+                                        print INF "set x tail x."."$RES[$i]".".O4";
+                                        print INF "x = sequence {x $PREP[1]}";
+					print INF "set x tail x."."$RES[$i]".".O6";
+					print INF "x = sequence {x $PREP[1]}";
+                                        print INF "savepdb x "."$RES[$i]".".pdb";
+                                        print INF "saveamberparm x "."$RES[$i]".".top "."$RES[$i]".".crd";
+                                        print INF "check x";
+                                        print INF "charge x";
+                                        print INF "Quit";
+                                        cp("$inputfile","./$head/$RES[$i]"."_leapinput");
+                                        my $cat = "cat inputfile >> ./$head/$RES[$i]"."_leapinput";
+                                        system("$cat");
+                                        chdir "$head";
+                                        $run_tleap = $tleap." -f "."$RES[$i]"."_leapinput ".">$RES[$i]"."_leapoutput" ;
+                                        system("$run_tleap");
+                                        chdir "../";
+                                }
+
+                                elsif($trk_ano =~ /B/)
+                                {
+                                        my $inf = "inputfile";
+                                        open(INF,">$inf");
+                                        print INF "x = sequence {OME $RES[$i]}";
+                                        print INF "set x tail x."."$RES[$i]".".O4";
+                                        print INF "x = sequence {x $PREP[10]}";
+					print INF "set x tail x."."$RES[$i]".".O6";
+					print INF "x = sequence {x $PREP[10]}";
+                                        print INF "savepdb x "."$RES[$i]".".pdb";
+                                        print INF "saveamberparm x "."$RES[$i]".".top "."$RES[$i]".".crd";
+                                        print INF "check x";
+                                        print INF "charge x";
+                                        print INF "Quit";
+                                        cp("$inputfile","./$head/$RES[$i]"."_leapinput");
+                                        my $cat = "cat inputfile >> ./$head/$RES[$i]"."_leapinput";
+                                        system("$cat");
+                                        chdir "$head";
+                                        $run_tleap = $tleap." -f "."$RES[$i]"."_leapinput ".">$RES[$i]"."_leapoutput" ;
+                                        system("$run_tleap");
+                                        chdir "../";
+                                }
+                        }
+
+                        if($trk_sub =~ /Q/)
+                        {
+                                if($trk_ano =~ /A/)
+                                {
+                                        my $inf = "inputfile";
+                                        open(INF,">$inf");
+                                        print INF "x = sequence {OME $RES[$i]}";
+                                        print INF "set x tail x."."$RES[$i]".".O3";
+                                        print INF "x = sequence {x $PREP[1]}";
+					print INF "set x tail x."."$RES[$i]".".O4";
+					print INF "x = sequence {x $PREP[1]}";
+					print INF "set x tail x."."$RES[$i]".".O6";
+					print INF "x = sequence {x $PREP[1]}";
+                                        print INF "savepdb x "."$RES[$i]".".pdb";
+                                        print INF "saveamberparm x "."$RES[$i]".".top "."$RES[$i]".".crd";
+                                        print INF "check x";
+                                        print INF "charge x";
+                                        print INF "Quit";
+                                        cp("$inputfile","./$head/$RES[$i]"."_leapinput");
+                                        my $cat = "cat inputfile >> ./$head/$RES[$i]"."_leapinput";
+                                        system("$cat");
+                                        chdir "$head";
+                                        $run_tleap = $tleap." -f "."$RES[$i]"."_leapinput ".">$RES[$i]"."_leapoutput" ;
+                                        system("$run_tleap");
+                                        chdir "../";
+                                }
+
+                                elsif($trk_ano =~ /B/)
+                                {
+                                        my $inf = "inputfile";
+                                        open(INF,">$inf");
+                                        print INF "x = sequence {OME $RES[$i]}";
+                                        print INF "set x tail x."."$RES[$i]".".O3";
+                                        print INF "x = sequence {x $PREP[10]}";
+                                        print INF "set x tail x."."$RES[$i]".".O4";
+                                        print INF "x = sequence {x $PREP[10]}";
+                                        print INF "set x tail x."."$RES[$i]".".O6";
+                                        print INF "x = sequence {x $PREP[10]}";
+					print INF "savepdb x "."$RES[$i]".".pdb";
+                                        print INF "saveamberparm x "."$RES[$i]".".top "."$RES[$i]".".crd";
+                                        print INF "check x";
+                                        print INF "charge x";
+                                        print INF "Quit";
+                                        cp("$inputfile","./$head/$RES[$i]"."_leapinput");
+                                        my $cat = "cat inputfile >> ./$head/$RES[$i]"."_leapinput";
+                                        system("$cat");
+                                        chdir "$head";
+                                        $run_tleap = $tleap." -f "."$RES[$i]"."_leapinput ".">$RES[$i]"."_leapoutput" ;
+                                        system("$run_tleap");
+                                        chdir "../";
+                                }
+                        }
+
+			$i++;
+
+		}#end if($_ =~ /INT/)
+	}#end while(<FIL>)
+	
+#check for WARNINGS and ERRORS in leap log files
+	my $errorfiles = "Error_files";
+	my $spec_errs = "Specific_Errors";
+	my $log;
+
+#Go to each generated prepfile directory
+	chdir "$head";
+	my @LOG = <*leapoutput>;
+	$chk = 0; #controls printing of text to Error_files
+
+	foreach $log (@LOG)
+	{
+		open(LG,"$log");
+		while(<LG>)
+		{
+			chomp;
+			if(($_ =~ /WARN/)or($_ =~ /ERROR/))
+			{
+				
+				open(SPERROR,">>$spec_errs");
+				print SPERROR "$file: "."$log: $_";
+
+				if($chk == 0)
+				{
+					chdir "../";
+					open(ERROR,">>$errorfiles");
+
+					my $fsize = -s "Error_files";
+					if($fsize == 0)#check file size
+					{
+						print ERROR "Problems with these files. Check directories for specific errors:";
+					}
+
+					print ERROR "$file";
+					$chk++;
+				}
+
+				chdir "$head";
+
+			}#end if(WARNING or ERROR)
+		}
+	}#end foreach $log
+
+	chdir "../";
+
+}#end foreach $file
+
+	if($chk > 0)
+	{
+		print "";
+		print "Prep files have errors. Look at Error_files for more info.";
+		print "";
+	}
+
+#unlink ('inputfile', 'header.in');

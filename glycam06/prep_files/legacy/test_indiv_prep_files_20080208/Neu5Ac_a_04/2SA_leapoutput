@@ -1,0 +1,61 @@
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/prep to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/lib to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/parm to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/cmd to search path.
+-f: Source 2SA_leapinput.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./2SA_leapinput
+----- Source: ../leaprc
+----- Source of ../leaprc done
+Loading parameters: /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+Reading title:
+GLYCAM PARAMETERS (FOR AMBER 8.0, RESP 0.010), COPYRIGHT CCRC 2004
+Loading Prep file: ../aglycon_04.prep.file
+Loading Prep file: ../Neu5Ac_a_04.prep
+Writing pdb file: 2SA.pdb
+Checking Unit.
+WARNING: The unperturbed charge of the unit: -2.000000 is not zero.
+
+ -- ignoring the warning.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Could not find angle parameter: CY - OS - CY
+Building proper torsion parameters.
+ ** No torsion terms for  OY-CY-OS-CY
+ ** No torsion terms for  CG-CY-OS-CY
+ ** No torsion terms for  C-CY-OS-CY
+ ** No torsion terms for  CY-OS-CY-C
+ ** No torsion terms for  CY-OS-CY-CG
+ ** No torsion terms for  CY-OS-CY-OY
+Building improper torsion parameters.
+old PREP-specified impropers:
+ <2SA 1>:  C2   O1A  C1   O1B 
+ <2SA 1>:  C5   C5N  N5   H5N 
+ <2SA 1>:  CME  N5   C5N  O5N 
+ <0SA 2>:  C2   O1A  C1   O1B 
+ <0SA 2>:  C5   C5N  N5   H5N 
+ <0SA 2>:  CME  N5   C5N  O5N 
+ total 6 improper torsions applied
+ 6 improper torsions in old prep form
+Building H-Bond parameters.
+Parameter file was not saved.
+Checking 'x'....
+WARNING: The unperturbed charge of the unit: -2.000000 is not zero.
+Warning: Close contact of 1.862413 angstroms between .R<2SA 1>.A<H7O 29> and .R<2SA 1>.A<O5N 18>
+Warning: Close contact of 1.343409 angstroms between .R<2SA 1>.A<H3A 7> and .R<0SA 2>.A<O1A 3>
+Warning: Close contact of 1.698872 angstroms between .R<0SA 2>.A<H7O 28> and .R<0SA 2>.A<O5N 17>
+Checking parameters for unit 'x'.
+Checking for bond parameters.
+Checking for angle parameters.
+Could not find angle parameter: CY - OS - CY
+There are missing parameters.
+check:  Warnings: 4
+Unit is OK.
+Total unperturbed charge:  -2.000000
+Total perturbed charge:    -2.000000
+	Quit

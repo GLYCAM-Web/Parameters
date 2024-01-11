@@ -1,0 +1,15 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../Gul_Lab_04.prep
+
+x = sequence {OME ZkA}
+set x tail x.ZkA.O2
+x = sequence {x 0kA}
+set x tail x.ZkA.O3
+x = sequence {x 0kA}
+savepdb x ZkA.pdb
+saveamberparm x ZkA.top ZkA.crd
+check x
+charge x
+Quit

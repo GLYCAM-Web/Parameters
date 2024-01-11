@@ -1,0 +1,20 @@
+
+===============================================================================
+
+Change log opened on 20110830 by BLFoley
+
+Directory:  /ln/params/glycam06/prep_files/indiv_amino_glycam_prep
+
+Purpose:  This directory will contain official GLYCAM amino acid libraries.
+
+Directory contents:
+
+	00_ChangeLog		This file
+
+	Glycam_06_aminoct.lib	C-terminal amino acid library
+
+	Glycam_06_amino.lib	Mid-chain amino acid library
+
+	Glycam_06_aminont.lib	N-terminal amino acid library
+
+	legacy			Directory containing historical information

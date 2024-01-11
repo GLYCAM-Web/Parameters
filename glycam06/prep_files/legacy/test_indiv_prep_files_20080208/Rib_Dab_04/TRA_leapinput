@@ -1,0 +1,17 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../Rib_Dab_04.prep
+
+x = sequence {OME TRA}
+set x tail x.TRA.O2
+x = sequence {x 0RA}
+set x tail x.TRA.O3
+x = sequence {x 0RA}
+set x tail x.TRA.O4
+x = sequence {x 0RA}
+savepdb x TRA.pdb
+saveamberparm x TRA.top TRA.crd
+check x
+charge x
+Quit

@@ -1,0 +1,15 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../Neu5Ac_a_04.prep
+
+x = sequence {OME JSA}
+set x tail x.JSA.O4
+x = sequence {x 0SA}
+set x tail x.JSA.O8
+x = sequence {x 0SA}
+savepdb x JSA.pdb
+saveamberparm x JSA.top JSA.crd
+check x
+charge x
+Quit

@@ -1,0 +1,11 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../Fuc_Dab_04.prep
+
+x = sequence {1FA 0FA}
+savepdb x 1FA.pdb
+saveamberparm x 1FA.top 1FA.crd
+check x
+charge x
+Quit

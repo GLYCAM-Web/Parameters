@@ -1,0 +1,31 @@
+# Begin 2014-03-13 BLFoley
+# This file contains a listing of the current parameters.
+# It is intended primarily for use by GLYCAM-Web, but might
+#	be more generally useful.
+
+#
+# Recommended force field from the group
+#
+LEAPRC_CARB		=	leaprc.GLYCAM_06j-1
+
+#
+# The following internal files are loaded with the LEAPRC_CARB
+#
+PARM_CARB		=	GLYCAM_06j.dat
+PREP_CARB		=	GLYCAM_06j-1.prep
+LIB_AMINO_CARB		=	GLYCAM_amino_06j_12SB.lib
+LIB_AMINON_CARB		=	GLYCAM_aminont_06j_12SB.lib
+LIB_AMINOC_CARB		=	GLYCAM_aminoct_06j_12SB.lib
+
+#
+# The following external files are loaded with the LEAPRC_CARB
+#
+LIB_SOLVENT		=	solvents.lib
+LIB_IONS		=	atomic_ions.lib  
+PARM_IONS		=	frcmod.ionsjc_tip3p
+
+#
+# Recommended force fields from other groups
+#
+LEAPRC_PROTEIN		=	leaprc.ff12SB
+

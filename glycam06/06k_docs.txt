@@ -1,0 +1,12 @@
+Documentation for GLYCAM_06k
+WANG, XIAOCONG, 12/28/2017
+
+LEAPRC files
+
+PREP and LIB files
+
+PARAMETER files
+
+* prep files for hexofuranoses were added
+
+* prep files for KDN and KDO were added

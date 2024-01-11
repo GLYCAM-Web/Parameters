@@ -1,0 +1,55 @@
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/prep to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/lib to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/parm to search path.
+-I: Adding /usr/local/programs/amber/amber9/dat/leap/cmd to search path.
+-f: Source YoA_leapinput.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./YoA_leapinput
+----- Source: ../leaprc
+----- Source of ../leaprc done
+Loading parameters: /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+Reading title:
+GLYCAM PARAMETERS (FOR AMBER 8.0, RESP 0.010), COPYRIGHT CCRC 2004
+Loading Prep file: ../aglycon_04.prep.file
+Loading Prep file: ../GalA_Lab_04.prep
+Writing pdb file: YoA.pdb
+Checking Unit.
+WARNING: The unperturbed charge of the unit: -3.000000 is not zero.
+
+ -- ignoring the warning.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+old PREP-specified impropers:
+ <0oA 3>:  C5   O6A  C6   O6B 
+ <YoA 2>:  C5   O6A  C6   O6B 
+ <0oA 4>:  C5   O6A  C6   O6B 
+ total 3 improper torsions applied
+ 3 improper torsions in old prep form
+Building H-Bond parameters.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+ (no restraints)
+Checking 'x'....
+WARNING: The unperturbed charge of the unit: -3.000000 is not zero.
+Warning: Close contact of 1.212335 angstroms between .R<0oA 3>.A<C5 4> and .R<0oA 4>.A<O6B 8>
+Warning: Close contact of 0.253399 angstroms between .R<0oA 3>.A<H5 5> and .R<0oA 4>.A<O6B 8>
+Warning: Close contact of 1.091884 angstroms between .R<0oA 3>.A<H5 5> and .R<0oA 4>.A<C6 6>
+Warning: Close contact of 0.867270 angstroms between .R<YoA 2>.A<H2 16> and .R<0oA 4>.A<H5 5>
+Warning: Close contact of 2.137606 angstroms between .R<YoA 2>.A<H3O 14> and .R<0oA 4>.A<C5 4>
+Warning: Close contact of 0.364958 angstroms between .R<YoA 2>.A<H3O 14> and .R<0oA 4>.A<O5 3>
+Warning: Close contact of 2.042548 angstroms between .R<YoA 2>.A<O3 13> and .R<0oA 4>.A<O5 3>
+Checking parameters for unit 'x'.
+Checking for bond parameters.
+Checking for angle parameters.
+check:  Warnings: 8
+Unit is OK.
+Total unperturbed charge:  -3.000000
+Total perturbed charge:    -3.000000
+	Quit

@@ -1,0 +1,34 @@
+#### Change log for 2011-09-15 ####
+
+Changed by BLFoley to create Glycam_06c-1.dat
+
+Corrected typo in torsion:
+-NH-CG-CG-SM   1    0.45          0.0            -3.         SCEE=1.0 SCNB=1.0 Thiol-linkages
++N -CG-CG-SM   1    0.45          0.0            -3.         SCEE=1.0 SCNB=1.0 Thiol-linkages
+
+
+######## information in file prior to 20110915
+File: readme/Glycam_06c.txt
+Added terms for lipids (all copies of existing terms)
+CP-H2
+H2-CP-OS
+CP-OS-CG
+CP-CG-N
+OS-CP-OS
+H2-CP-CG
+CG-OS-CP-CG
+OS-CP-CG-N
+H2-CP-OS-CG
+H2-CP-CG-H1
+H2-CP-CG-N
+H2-CP-CG-CG
+CP-OS-CG-H1
+CP-CG-N -H
+CP-CG-CG-CG
+CP-CG-CG-N
+OH-CG-CG-CP
+CG-CG-CP-CG
+H1-CG-CP-CG
+OS-CG-CP-CG
+OS-CP-OS-CG
+CP-OS-CG-CG

@@ -1,0 +1,11 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../Glc_Lab_04.prep
+
+x = sequence {OME 6gA 0gA}
+savepdb x 6gA.pdb
+saveamberparm x 6gA.top 6gA.crd
+check x
+charge x
+Quit

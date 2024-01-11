@@ -1,0 +1,6 @@
+logfile ./20080222_test_leaprc_Glycam_06.leaplog
+source ../leaprc.Glycam_06
+20080222_m = sequence { 2cU 0GA }
+saveamberparm 20080222_m 20080222_m.top 20080222_m.crd
+savepdb 20080222_m 20080222_m.pdb
+

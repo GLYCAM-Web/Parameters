@@ -1,0 +1,100 @@
+20100811 BLFoley
+
+Changed file indiv_prep_files/GalNAc_Dab_06.prep so that 6VB builds
+	properly.  I'll copy the current version of GalNAc_Dab_06.prep
+	to GalNAc_Dab_06.prep_old_20100811 for historical reasons.
+
+	Of course, I also ran cat_preps.sh to rebuild Glycam_06.prep.
+
+The specific changes to residue 6VB are:
+
+Change FROM THIS:
+
+ 9 C4   CG  3  7  6  4  1.528   110.8      59.1     0.253
+10 H4   H1  E  9  7  6  1.100   109.8      66.4     0.0
+11 O4   OH  S  9  7  6  1.430   107.9    -174.0    -0.690
+12 H4O  HO  E 11  9  7  0.958   109.2    -139.6     0.440
+
+TO THIS:
+
+ 9 C4   CG  3  7  6  4  1.528   110.8      59.1     0.253
+10 H4   H1  E  9  7  6  1.100   109.8    -174.0     0.0000
+11 O4   OH  S  9  7  6  1.430   107.9      66.4    -0.6900
+12 H4O  HO  E 11  9  7  0.958   109.2    -139.6     0.4400
+
+======================================================================= 
+20091108 BLFoley
+
+Updated files for Ara Ldu and Ddu.  Renamed the existing files to:
+	indiv_prep_files/Ara_Ddu_06.prep_old_20091108
+	indiv_prep_files/Ara_Ldu_06.prep_old_20091108
+...these can probably be deleted at will.  I'm keeping them only for 
+the sake of record.
+
+======================================================================= 
+20091013 BLFoley
+
+Changed Xylofuranose and Xylopyranose files so that hydroxyl oxygens 
+	are no longer identified as atom type "OS" (changed to OH).
+	(Unless they are linking oxygens, of course.)
+
+======================================================================= 
+20090427 MBTessier
+-- N-terminal peptides used for glycosidic linkage had their NH3-nitrogen
+	mislabled as atom type 'N' and not atom type 'N3'.  This has been
+	corrected ./indiv_amino_glycam_prep/Glycam_06_aminont.* files and
+	backups for the originals are titled Glycam_06_aminont_A.* while
+	the modified backups are labeled Glycam_06_aminont_B.*.
+
+=======================================================================
+20080618 BLFoley
+
+Found that somehow Bac.prep and calcium.prep were not copied over to
+the new glycam06 directory tree.  Added those and updated Glycam_06.prep
+
+
+
+=======================================================================
+20080222 BLFoley
+
+-- Re-copied the test_indiv_prep_files_20080208/ (see below) to
+	reflect addition of IdA prep files and to reflect the
+	modification of the L-fructofuranose prep file to include
+	entries for linkage to the 2 position (e.g. 2cU-0cU)
+
+-- Copied appropriate files from test_indiv_prep_files_20080208/ to
+	indiv_prep_files/ and remade Glycam_06.prep  Files copied:
+		IdA_Dab_04.prep
+		Fru_Ldu_04.prep
+	They were renamed to "06"
+
+Change log begun on 20080221 by BLFoley
+
+-- copied /home/lachele/Lachele_Final_Check_Preps_20080204
+	to test_indiv_prep_files_20080208/
+
+-- copied prep files from test_indiv_prep_files_20080208/ to
+	the indiv_prep_files/ directory
+
+-- changed names of files in indiv_prep_files/ to be "Glycam_06"
+
+-- Made sure these files were up to date:
+	cat_preps.sh
+	check_prep_backwards.sh
+	check_prep.sh
+	DIRECTORY_WRITE_RULES
+
+-- copied these files/directories from the glycam04 tree:
+	Glycam_04EP.prep
+	indiv_amino_glycam_prep/
+
+-- changed names of files in indiv_amino_glycam_prep/ to be "Glycam_06"
+	also updated README
+
+-- made indiv_lipid_glycam_prep/ for future generation of lipid prep files
+
+-- copied Matt's set of sample lipid prep's into this file
+	Glycam_06_lipids.prep
+
+-- used cat_preps to generate:
+	Glycam_06.prep 

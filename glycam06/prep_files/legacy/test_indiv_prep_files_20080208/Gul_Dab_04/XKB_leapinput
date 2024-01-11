@@ -1,0 +1,15 @@
+source ../leaprc
+loadamberparams /usr/local/programs/glycam04/parameters/Glycam_06a.dat
+loadamberprep ../aglycon_04.prep.file
+loadamberprep ../Gul_Dab_04.prep
+
+x = sequence {OME XKB}
+set x tail x.XKB.O2
+x = sequence {x 0KA}
+set x tail x.XKB.O6
+x = sequence {x 0KA}
+savepdb x XKB.pdb
+saveamberparm x XKB.top XKB.crd
+check x
+charge x
+Quit
